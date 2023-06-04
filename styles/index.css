@@ -5,9 +5,10 @@
 }
 
 body {
+    background-color: rgb(36, 26, 26);
     font-size: 62.5%;
+    font-family: 'Geologica', sans-serif;
 }
-
 
 /* SECTION 1. */
 
