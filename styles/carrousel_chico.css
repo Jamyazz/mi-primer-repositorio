@@ -1,0 +1,45 @@
+.carrousel__contenedor {
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 40px;
+}
+
+.flecha__anterior,
+.flecha__siguiente  {
+    position:absolute;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border:none;
+    top: calc(50% - 35px);
+    cursor:pointer;
+    line-height: 30px;
+    background: none;
+    color:white;
+    opacity: 20%;
+
+}
+
+.flecha__anterior:hover,
+.flecha__siguiente:hover  {
+    opacity: 100%;
+}
+
+
+
+.flecha__anterior {
+    left: 0px;
+    margin-left: 10px;
+
+}
+
+.flecha__siguiente {
+    right: 40px;
+}
+
+
+.carrousel__lista{
+    overflow: hidden;
+    width: 95%;
+}
+
