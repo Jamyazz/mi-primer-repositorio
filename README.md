@@ -9,8 +9,11 @@
 〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
 
 Integrantes:
-//Germán Marcelo Anselmo.   
+
+//Germán Marcelo Anselmo.
+
 //Noelia Jazmin Chavez.
+
 //Agustin Staiger. 
 
 〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
