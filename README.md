@@ -1,17 +1,16 @@
 〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
-〜                                           〜
-〜                # SYLOFLIX.                〜
-〜                                           〜
-〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜            
-〜                                           〜
-〜          Repositorio de Syloflix.         〜
-〜                                           〜         
+
+# SYLOFLIX #     
+
 〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
-〜                                           〜
-〜 Integrantes:                              〜
-〜                                           〜
-〜            Germán Marcelo Anselmo.        〜
-〜            Noelia Jazmin Chavez.          〜
-〜            Agustin Staiger.               〜
-〜                                           〜
+
+/* Repositorio de Syloflix. */
+
+〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
+
+Integrantes:
+//Germán Marcelo Anselmo.   
+//Noelia Jazmin Chavez.
+//Agustin Staiger. 
+
 〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
