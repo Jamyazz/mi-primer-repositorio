@@ -1,0 +1,208 @@
+#forms {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 9rem;
+
+    #formulario {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 66rem;
+        width: 45rem;
+        background-color: rgba(3, 3, 7, 0.8);
+        font-size: 5rem;
+        color: white;
+        border-radius: 1rem;
+        padding-top: 6rem;
+
+        #low {
+            width: 31.4rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            #login {
+                display: flex;
+                flex-direction: column;
+                row-gap: 2rem;
+
+                h1 {
+                    font-size: 3rem;
+                    font-weight: 800;
+                }
+
+                #mail, #contrasenia {
+                    padding:2rem;
+                    height: 5rem;
+                    font-size: 1.6rem;
+                    border-radius: 0.5rem;
+                    background-color: rgb(51, 51, 51);
+                    border-style: none;
+                    color: white;
+                }
+
+                #contrasenia {
+                    width: auto;
+                }
+
+                button {
+                    color: white;
+                    padding:0.8rem;
+                    border-style: none;
+                    border-radius: 0.5rem;
+                    margin-top: 2.4rem;
+                    background-color: #00B9BB;
+                    font-weight: 700;
+                }
+
+                button:hover {
+                    background-color: #029a9c;
+                    cursor: pointer;
+                }
+
+                #recordarAyuda {
+                    display: flex;
+                    width: 31.4rem;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding-bottom: 2rem;
+
+                    #divRecuerdo {
+                        display: flex;
+                        flex-direction: row;
+                        column-gap: 0.5rem;
+
+                        #recordar {
+                            accent-color: gray;
+                        }
+
+                        #recordar:focus {
+                            accent-color: white;
+                        }
+
+                        label {
+                            font-size: 1.6rem;
+                            font-weight: 400;
+                        }
+
+                    }
+
+                    a {
+                        font-weight: 400;
+                        font-size: 1.6rem;
+                        color: white;
+                        text-decoration: none;
+                        width: fit-content;
+                        overflow: hidden
+                    }
+
+                }
+
+            }
+
+            #avisos {
+                padding-top: 4rem;
+
+                #registrar,
+                #captchas {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    p,
+                    a {
+                        font-weight: 400;
+                        font-size: 1.4rem;
+                        text-decoration: none;
+                        color: white;
+                        text-align: justify;
+                    }
+
+                    #captchaGoogle {
+                        line-height: 2rem;
+                    }
+
+                }
+
+                #suscribir {
+                    font-weight: bold !important;
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+@media (max-width: 400px) {
+    #recordarAyuda {
+        flex-wrap: nowrap;
+
+        a {
+            width: 100%;
+            text-align: left;
+        }
+
+    }
+}
+
+@media (max-width: 767.98px) { 
+    #forms {
+        display: 2rem;
+        padding-bottom: 5rem;
+
+        #formulario{
+            background-color: unset;
+            height: fit-content;
+            width: 100%;
+            
+
+            #low {
+                width: 100%;
+                padding: 1rem 3rem 3rem 3rem;
+                
+                #login {
+                    width: 100%;
+
+                    h1 {
+                        font-weight: 700;
+                    }
+        
+                    #mail, #contrasenia {
+                        width: 100%;
+
+                    }
+
+                    #recordarAyuda {
+                        width: 100%;
+    
+                        #divRecuerdo {
+                            width: 100%;
+    
+                        }
+
+                        a {
+                            width: 100%;
+                            text-align: end;
+                        }
+    
+                    }
+
+                }
+
+                #avisos {
+                    width: 100%;
+
+                }
+    
+            }
+
+        }
+
+    }
+
+}
