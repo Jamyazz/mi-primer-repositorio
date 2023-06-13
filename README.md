@@ -1,2 +1,17 @@
-# mi-primer-repositorio
-Mi primer repositorio en GitHub para el curso de Syloper
+〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
+〜                                           〜
+〜                # SYLOFLIX.                〜
+〜                                           〜
+〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜            
+〜                                           〜
+〜          Repositorio de Syloflix.         〜
+〜                                           〜         
+〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
+〜                                           〜
+〜 Integrantes:                              〜
+〜                                           〜
+〜            Germán Marcelo Anselmo.        〜
+〜            Noelia Jazmin Chavez.          〜
+〜            Agustin Staiger.               〜
+〜                                           〜
+〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
