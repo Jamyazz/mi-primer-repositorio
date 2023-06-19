@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 @Component({
   selector: 'app-carrousel-chico',
   templateUrl: './carrousel-chico.component.html',
