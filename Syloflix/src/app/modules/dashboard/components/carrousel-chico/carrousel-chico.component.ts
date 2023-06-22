@@ -1,5 +1,7 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
-import Swiper from 'swiper';
+import { AfterViewInit, Component } from '@angular/core';
+
+// Declaración de jQuery
+declare var $: any;
 
 @Component({
   selector: 'app-carrousel-chico',
@@ -7,69 +9,48 @@ import Swiper from 'swiper';
   styleUrls: ['./carrousel-chico.component.scss']
 })
 export class CarrouselChicoComponent implements AfterViewInit {
-  @ViewChild('swiperContainer') swiperContainer!: ElementRef;
-
-  private swiper!: Swiper;
-  private totalSlides = 0;
-  private visibleSlides = 2;
-  private currentSlide = 0;
 
   ngAfterViewInit(): void {
-    this.initSwiper();
-    this.initCarouselButtons();
-  }
-
-  private initSwiper(): void {
-    const slides = this.swiperContainer.nativeElement.querySelectorAll('.swiper-slide');
-    this.totalSlides = Math.min(slides.length, 20);
-
-    this.swiper = new Swiper(this.swiperContainer.nativeElement, {
-      slidesPerView: this.visibleSlides,
-      spaceBetween: 10,
-      navigation: {
-        prevEl: '.flecha__anterior',
-        nextEl: '.flecha__siguiente',
-      }
+    $(document).ready(function() {
+      $('.slick-carousel').slick({
+        lazyLoad: 'ondemand',
+        arrows: true,
+        dots: true,
+        fade: false,
+        infinite: false,
+        speed: 200,
+        slidesToShow: 6,
+        slidesToScroll: 4,
+        centerMode: false,
+        focusOnSelect: true,
+        prevArrow: '<button type="button" class="slick-prev" aria-label="Previous"><i class="fa-solid fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next" aria-label="Next"><i class="fa-solid fa-chevron-right"></i></button>',
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 3,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+      });
     });
-
-    this.swiper.on('slideChange', () => {
-      this.currentSlide = this.swiper.activeIndex;
-      this.updateCarouselButtons();
-    });
-
-    this.updateCarouselButtons();
-  }
-
-  private initCarouselButtons(): void {
-    const prevButton = document.querySelector('.flecha__anterior');
-    const nextButton = document.querySelector('.flecha__siguiente');
-
-    prevButton?.addEventListener('click', () => {
-      if (this.currentSlide > 0) {
-        this.currentSlide -= this.visibleSlides;
-        this.swiper.slidePrev();
-        this.updateCarouselButtons();
-      }
-    });
-
-    nextButton?.addEventListener('click', () => {
-      if (this.currentSlide < this.totalSlides - this.visibleSlides) {
-        this.currentSlide += this.visibleSlides;
-        this.swiper.slideNext();
-        this.updateCarouselButtons();
-      }
-    });
-
-    this.updateCarouselButtons();
-  }
-
-  private updateCarouselButtons(): void {
-    const prevButton = document.querySelector('.flecha__anterior');
-    const nextButton = document.querySelector('.flecha__siguiente');
-
-    if (prevButton && nextButton) {
-      prevButton.classList.toggle('disabled', this.currentSlide === 0);
-      nextButton.classList.toggle('disabled', this.currentSlide + this.visibleSlides >= this.totalSlides);
-    }
   }
 }
