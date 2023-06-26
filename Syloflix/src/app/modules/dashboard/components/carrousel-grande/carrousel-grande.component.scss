@@ -1,4 +1,110 @@
-h1 {
-    font-size: 15rem;
-    background-color: aqua;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 1.6rem !important;
+}
+
+.carousel-inner {
+  height: 70vh;
+  width: 100%;
+}
+
+.carousel-item{
+  height: 70vh;
+  width: 100%;
+}
+
+.carousel-caption {
+  left: 5rem;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 5rem;
+}
+
+.anterior, .proxima {
+  font-size: 3rem !important;
+  opacity: 0;
+}
+
+.anterior:hover,
+.proxima:hover {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 2rem;
+  border-radius: 50%;
+  padding: 0.8rem;
+  align-self:center;
+}
+
+#carouselExampleCaptions:hover .anterior,
+#carouselExampleCaptions:hover .proxima {
+  opacity: 1;
+}
+
+img {
+  background-size: auto;
+  background-position-y: 10%;
+  width: 100%;
+}
+
+.parrafo {
+  width: 65%;
+  font-size: 1.8rem !important;
+  padding: 0.4rem 0 1rem;
+  line-height: 1.8rem;
+  line-height: 3rem;
+  text-align: justify;
+}
+
+.titulo {
+  font-size: 3rem !important;
+  text-align: left;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+  font-size: 1rem;
+  padding-bottom: 3rem;
+}
+
+.links a {
+  text-decoration: none;
+  padding: 0.6rem 1.2rem 0.6rem 1.2rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+}
+
+.reproducir {
+  font-size: 100%;
+  color: black;
+  background-color: rgba(254, 254, 254, 1);
+}
+
+.infoSerie {
+  font-size: 1rem;
+  color: white;
+  background-color: rgba(81, 75, 77, 0.8);
+}
+
+#infoBtn {
+  width: 1.6rem; 
+  display:flex; 
+  flex-direction: row; 
+  align-self: center;
+}
+
+#info {
+  display: flex;
+  flex-direction: row;
+  column-gap: 0.3rem;
+}
+
+
+#opacidad {
+  
+  flex: 1;
 }

@@ -1,6 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
 
-
 declare var $: any;
 
 @Component({
