@@ -1,4 +1,4 @@
-main {
+body {
     width: 100%;
     height: fit-content;
     background-image: url('../../../../../assets/login-register/loginbackground.jpg');
@@ -13,7 +13,7 @@ main {
 }
 
 @media (max-width: 767.98px) { 
-    main {
+    body {
         background-image: unset;
         background-color: black;
     }
