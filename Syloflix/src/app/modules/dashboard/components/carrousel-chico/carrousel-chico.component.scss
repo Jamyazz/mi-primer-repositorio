@@ -1,8 +1,12 @@
 
+body {
+  background-color: black;
+}
 .carrousel-chico {
   background-color: black;
   margin-top:10px;
   margin-bottom: 10px;
+  }
   .slick-carousel {
     margin-top: 10px;
     margin-left: 30px;
@@ -37,14 +41,7 @@
     right: 40px;
     color: transparent;
   }
-  /*
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-size: 1.6rem !important; 
-}
-posible error*/
+
 .slick-dots {
   display: flex;
   justify-content: right;
@@ -83,7 +80,7 @@ posible error*/
 .imagenesCarrusel {
   width:204.4px;
   height:115 px;
-  border-radius: 4px;;
+  border-radius: 4px;
 }
 
 .slick-prev:hover,
@@ -93,8 +90,7 @@ posible error*/
 }
 
 h2 {
-  // background-color: #49A37B;
-  color: #E5E5E5; // Color N
+  color: #E5E5E5;
   margin-top: 10px;
   margin-left: 30px;
 }
