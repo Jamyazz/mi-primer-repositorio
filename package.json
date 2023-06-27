@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@types/glider-js": "^1.7.8"
+  }
+}
