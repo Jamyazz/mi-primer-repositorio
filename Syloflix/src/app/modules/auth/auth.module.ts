@@ -7,6 +7,7 @@ import { HeaderAuthComponent } from './components/headerAuth/headerAuth.componen
 import { LoginBoxComponent } from './components/login-box/login-box.component'; 
 import { LoginComponent } from './views/login/login.component';
 import { AuthComponent } from './auth.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { AuthComponent } from './auth.component';
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    FormsModule
   ],
 })
 export class AuthModule { }
