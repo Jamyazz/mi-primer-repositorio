@@ -27,6 +27,12 @@
                 flex-direction: column;
                 row-gap: 2rem;
 
+                #loggeado {
+                    font-size: 1.6rem;
+                    color: red;
+                    text-align: center;                    
+                }
+
                 h1 {
                     font-size: 3rem;
                     font-weight: 800;

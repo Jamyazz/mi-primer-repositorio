@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-login-box',
@@ -7,13 +7,27 @@ import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
 })
 export class LoginBoxComponent {
 
-  @ViewChild('elcorreo') mail!: ElementRef;
-  @ViewChild('lapassword') pass!: ElementRef;
+  ngOnInit(){
+    localStorage.setItem('isLogged', 'false');
+  }
 
-  cambiar(): void {
+  mail: string = '';
+  contrasenia: string = '';
+  loginFalladito: boolean = false;
+  error: string = '';
 
-    const elcorreo: any = document.querySelector("#email");
-    elcorreo.style.color= "red";
+  submitForm() {
+    if (this.mail === 'mail@mail.com' && this.contrasenia === '1234admin') {
+      // Loggeado.
+      this.loginFalladito = false;
+      localStorage.setItem('isLogged', 'true');
+      console.log('Loggeado.');
+    } else {
+      // Falló todo nomás.
+      this.loginFalladito = true;
+      this.error = 'Datos erroneos. Reinténtalo o contacta con soporte.';
+      console.log('Falló todo nomás.');
+    }
 
   }
 
