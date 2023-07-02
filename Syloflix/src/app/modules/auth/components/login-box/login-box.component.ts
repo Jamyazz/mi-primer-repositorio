@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login-box',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./login-box.component.scss']
 })
 export class LoginBoxComponent {
+
+  constructor(private _router: Router){}
 
   ngOnInit(){
     localStorage.setItem('isLogged', 'false');
@@ -17,10 +20,11 @@ export class LoginBoxComponent {
   error: string = '';
 
   submitForm() {
-    if (this.mail === 'mail@mail.com' && this.contrasenia === '1234admin') {
+    if (this.mail === 'dev.team@syloflix.com' && this.contrasenia === 'syloflix') {
       // Loggeado.
       this.loginFalladito = false;
       localStorage.setItem('isLogged', 'true');
+      this._router.navigate(['home']);
       console.log('Loggeado.');
     } else {
       // Falló todo nomás.

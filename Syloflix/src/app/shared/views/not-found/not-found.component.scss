@@ -1,0 +1,258 @@
+#contenedor {
+    background-image: url('../../../../assets/not-found/BOIt1R3l_2x.webp');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-shadow: 0 1px 2px rgba(0,0,0,.57);
+
+    main {
+        padding-top: 10rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+        section {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            row-gap: 2rem;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+    
+            h1 {
+                font-size: 9rem;
+                padding-bottom: 1rem;
+            }
+    
+            p {
+                font-size: 3rem;
+                font-weight: 300;
+                width: 50%;
+                text-align: center;
+            }
+    
+            #boton {
+                border-radius: 0.4rem;
+                padding: 1rem 2.4rem 1rem 2.4rem;
+                text-decoration: none;
+                color: black;
+                background-color: white;
+                font-size: 2.5rem;
+                font-weight: bold;
+    
+            }
+
+            #boton:hover {
+                background-color: rgba(255, 255, 255, 0.75);
+            }
+    
+            #codigoErrores {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+    
+                #error {
+                    font-size: 3rem;
+                    width: fit-content;
+                    padding-left: 1.5rem;
+                    border-left: 0.3rem solid #00B9BB;
+    
+                    #code {
+                        font-size: 3rem;
+                        font-weight: bold;
+    
+                    }
+    
+                }
+    
+            }
+    
+            #de {
+                width: 90%;
+                text-align: right;
+                text-shadow: 1px 2px rgba(0,0,0,.57);
+                font-size: 2rem;
+                text-align: right;
+    
+                #pelicula {
+                    width: 100%;
+                    font-size: 2rem;
+                    font-weight: bold;
+    
+                }
+    
+            }
+    
+        }
+    
+    }
+
+}
+
+
+
+
+
+@media (max-width: 575.98px) { 
+    
+    #contenedor {
+  
+        main {
+
+            section {
+        
+                h1 {
+                    font-size: 4rem;
+                    text-align: center;
+                }
+        
+                p {
+                    font-size: 2.2rem;
+                }
+        
+                #boton {
+                    font-size: 1.6rem;        
+                }
+        
+                #codigoErrores {
+        
+                    #error {
+                        font-size: 2.4rem;
+        
+                        #code {
+                            font-size: 2.4rem;
+ 
+                        }
+        
+                    }
+        
+                }
+        
+                #de {
+                    font-size: 1.4rem;
+
+                    #pelicula {
+                        font-size: 1.4rem;
+                        font-weight: 500;
+
+                    }
+        
+                }
+        
+            }
+        
+        }
+    
+    }
+
+}
+
+@media (min-width: 576px) and (max-width: 1199.98px) { 
+
+    #contenedor {
+  
+        main {
+
+            section {
+        
+                h1 {
+                    font-size: 6rem;
+                }
+        
+                p {
+                    font-size: 2.2rem;
+                }
+        
+                #boton {
+                    font-size: 1.6rem;        
+                }
+        
+                #codigoErrores {
+        
+                    #error {
+                        font-size: 2.4rem;
+        
+                        #code {
+                            font-size: 2.4rem;
+ 
+                        }
+        
+                    }
+        
+                }
+        
+                #de {
+                    font-size: 1.4rem;
+
+                    #pelicula {
+                        font-size: 1.4rem;
+                        font-weight: 500;
+
+                    }
+        
+                }
+        
+            }
+        
+        }
+    
+    }
+
+}
+
+@media (min-width: 1200px) and (max-width: 1919.98px) {
+
+    #contenedor {
+  
+        main {
+
+            section {
+        
+                h1 {
+                    font-size: 6rem;
+                }
+        
+                p {
+                    font-size: 2.2rem;
+                }
+        
+                #boton {
+                    font-size: 1.6rem;        
+                }
+        
+                #codigoErrores {
+        
+                    #error {
+                        font-size: 2.4rem;
+        
+                        #code {
+                            font-size: 2.4rem;
+ 
+                        }
+        
+                    }
+        
+                }
+        
+                #de {
+                    font-size: 1.4rem;
+
+                    #pelicula {
+                        font-size: 1.4rem;
+
+                    }
+        
+                }
+        
+            }
+        
+        }
+    
+    }
+
+}

@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
+import { AuthGuard } from 'src/app/shared/guards';
 import { LoginComponent } from './views/login/login.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
+  
+  {
+    path: '',
+    component: LoginComponent
+  },
 ];
 
 @NgModule({
