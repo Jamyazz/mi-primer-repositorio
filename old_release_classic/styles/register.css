@@ -1,0 +1,212 @@
+/* Inicio. */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Geologica', sans-serif;
+}
+
+#inicio {
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/loginbackground.jpg");
+    background-size: cover;
+    background-position: center;
+    height: fit-content;
+    position: relative;
+    border-bottom: 0.5rem solid rgb(35, 35, 35);
+}
+
+#opacidad {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 65.5vh;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+#cabezera {
+    width: 65%;
+    height: 5.4rem;
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    padding: 1.5rem;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+#logo {
+    width: 10rem;
+}
+
+.botonChico {
+    background-color: #00B9BB;
+    max-width: 8rem;
+    height: 2rem;
+    font-size: 0.8rem;
+    color: white;
+    padding: 0 1rem 0 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.3rem;
+    align-self: center;
+}
+
+.botonChico:hover {
+    background-color: #029a9c;
+    cursor: pointer;
+}
+
+.titulo {
+    color: white;
+    align-self: center;
+    padding-top: 13rem;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.parrafon {
+    color: white;
+    align-self: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1rem 0 1rem;
+    text-align: center;
+}
+
+.parrafin {
+    color: white;
+    align-self: center;
+    font-size: 1.25rem;
+    font-weight: 400;
+    padding: 0.6rem;
+    text-align: center;
+}
+
+.formulario {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    padding: 0.6rem 0 11.8rem;
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+    justify-content: center;
+}
+
+.correo {
+    background-color: rgba(19, 23, 25, 0.8);
+    height: 3.4rem;
+    width: 24.5rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    padding: 1rem;
+    border: 1px solid gray;
+    border-radius: 0.2rem;
+}
+
+.boton {
+    background-color: #00B9BB;
+    width: 12rem;
+    height: 3.4rem;
+    font-size: 1.5rem;
+    color: white;
+    padding: 0 1rem 0 1rem;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+/* Disfruta en tu TV. */
+#disfruta {
+    background-color: black;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 0.5rem solid rgb(35, 35, 35);
+}
+
+#cuerpo {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3.2rem;
+}
+
+#textos {
+    width: 50%;
+}
+
+#textos>.parrafon {
+    text-align: left;
+
+}
+
+#textos>.titulo {
+    padding: 0;
+}
+
+#tv>img{
+    width: 100%;
+}
+
+#descarga {
+    height: 70vh;
+    background-color: black; 
+}
+
+
+
+
+--------------
+
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 8.6rem;
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        column-gap: 55rem;
+        align-items: center;
+        justify-content: space-evenly;
+         
+        img {
+            width: 16rem;
+            height: 6rem;
+        }
+
+
+        a {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: white;
+            background-color: #00B9BB;
+            padding: 0.6rem 1.5rem;
+            font-weight: bold;
+            border-radius: 0.5rem;    
+        }
+        
+        a:hover {
+            background-color: #029a9c;
+            cursor: pointer;
+        }
+
+    }
+
+}
