@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+<<<<<<< HEAD
 import { AuthGuard } from './shared/guards';
 import { NotFoundComponent } from './shared/views/not-found/not-found.component';
 
@@ -27,6 +28,14 @@ const routes: Routes = [
     component: NotFoundComponent,
   }
 
+=======
+import { HomeComponent } from './modules/dashboard/views/home/home.component';
+import { LoginComponent } from './modules/auth/views/login/login.component';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+>>>>>>> bdaca53f (foot/head)
 ];
 
 @NgModule({

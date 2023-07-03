@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./carrousel-grande.component.scss']
 })
 export class CarrouselGrandeComponent {
+<<<<<<< HEAD
   imagenes: string[] = [
     "carrouselGrande1.webp",
     "carrouselGrande2.webp",
@@ -29,5 +30,7 @@ export class CarrouselGrandeComponent {
     "Billy Batson y sus hermanos adoptivos, que se transforman en superhéroes al decir ¡Shazam!, se ven obligados a volver a la acción y luchar contra las Hijas de Atlas, a quienes deben evitar que usen un arma que podría destruir el mundo.",
     "Este drama crudo describe las vidas de un grupo de sobrevivientes que está siempre en movimiento en busca de un hogar seguro durante las semanas y meses de un apocalipsis zombi."
   ];
+=======
+>>>>>>> bdaca53f (foot/head)
 
 }

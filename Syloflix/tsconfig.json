@@ -29,6 +29,9 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true
+<<<<<<< HEAD
 
+=======
+>>>>>>> bdaca53f (foot/head)
   }
 }

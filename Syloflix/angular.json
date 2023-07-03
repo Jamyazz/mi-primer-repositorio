@@ -30,8 +30,12 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
                 "src/styles.scss",
                 "src/app/modules/dashboard/components/carrousel-chico/carrousel-chico.component.scss"
+=======
+              "src/styles.scss"
+>>>>>>> bdaca53f (foot/head)
             ],
             "scripts": []
           },
