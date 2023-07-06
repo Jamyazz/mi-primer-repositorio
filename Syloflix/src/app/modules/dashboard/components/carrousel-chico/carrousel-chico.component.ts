@@ -1,12 +1,20 @@
+<<<<<<< HEAD
+import { Component } from '@angular/core';
+=======
 import { AfterViewInit, Component } from '@angular/core';
 
 declare var $: any;
+>>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
 
 @Component({
   selector: 'app-carrousel-chico',
   templateUrl: './carrousel-chico.component.html',
   styleUrls: ['./carrousel-chico.component.scss']
 })
+<<<<<<< HEAD
+export class CarrouselChicoComponent {
+
+=======
 export class CarrouselChicoComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
@@ -52,4 +60,5 @@ export class CarrouselChicoComponent implements AfterViewInit {
       });
     });
   }
+>>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
 }

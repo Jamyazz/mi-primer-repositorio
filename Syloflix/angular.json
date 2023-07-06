@@ -30,8 +30,12 @@
               "src/assets"
             ],
             "styles": [
+<<<<<<< HEAD
+              "src/styles.scss"
+=======
                 "src/styles.scss",
                 "src/app/modules/dashboard/components/carrousel-chico/carrousel-chico.component.scss"
+>>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
             ],
             "scripts": []
           },
