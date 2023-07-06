@@ -5,8 +5,12 @@
   font-size: 1.6rem !important;
 }
 
+.carousel {
+  overflow-x: none;
+  text-shadow: 0 2px 4px rgba(0,0,0,.57);
+}
 .carousel-inner {
-  height: 70vh;
+  height: 100vh;
   width: 100%;
 }
 
@@ -17,6 +21,7 @@
 
 .carousel-caption {
   left: 5rem;
+  transform: translate(0, 30%);
 }
 
 .carousel-control-prev, .carousel-control-next {
