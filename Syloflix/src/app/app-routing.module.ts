@@ -1,17 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { HomeComponent } from './modules/dashboard/views/home/home.component';
-import { LoginComponent } from './modules/auth/views/login/login.component';
-
-const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
-=======
->>>>>>> 86d38e8f282a3966576fd236a0d18ff24e0bdfb1
 import { AuthGuard } from './shared/guards';
 import { NotFoundComponent } from './shared/views/not-found/not-found.component';
 
@@ -38,18 +27,6 @@ const routes: Routes = [
     component: NotFoundComponent,
   }
 
-<<<<<<< HEAD
-=======
-import { HomeComponent } from './modules/dashboard/views/home/home.component';
-import { LoginComponent } from './modules/auth/views/login/login.component';
-
-const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'login', component: LoginComponent },
->>>>>>> bdaca53f (foot/head)
-=======
->>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
->>>>>>> 86d38e8f282a3966576fd236a0d18ff24e0bdfb1
 ];
 
 @NgModule({

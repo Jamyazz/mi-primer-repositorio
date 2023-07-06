@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-=======
-import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
->>>>>>> bdaca53f (foot/head)
-=======
-import { Component, ViewChild, ElementRef, Renderer2 } from '@angular/core';
-=======
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
->>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
->>>>>>> 86d38e8f282a3966576fd236a0d18ff24e0bdfb1
 
 @Component({
   selector: 'app-login-box',
@@ -20,18 +8,6 @@ import { Router } from '@angular/router';
 })
 export class LoginBoxComponent {
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  @ViewChild('elcorreo') mail!: ElementRef;
-  @ViewChild('lapassword') pass!: ElementRef;
-
-  cambiar(): void {
-
-    const elcorreo: any = document.querySelector("#email");
-    elcorreo.style.color= "red";
-=======
->>>>>>> 86d38e8f282a3966576fd236a0d18ff24e0bdfb1
   constructor(private _router: Router){}
 
   ngOnInit(){
@@ -56,19 +32,6 @@ export class LoginBoxComponent {
       this.error = 'Datos erroneos. Reinténtalo o contacta con soporte.';
       console.log('Falló todo nomás.');
     }
-<<<<<<< HEAD
-=======
-  @ViewChild('elcorreo') mail!: ElementRef;
-  @ViewChild('lapassword') pass!: ElementRef;
-
-  cambiar(): void {
-
-    const elcorreo: any = document.querySelector("#email");
-    elcorreo.style.color= "red";
->>>>>>> bdaca53f (foot/head)
-=======
->>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
->>>>>>> 86d38e8f282a3966576fd236a0d18ff24e0bdfb1
 
   }
 
