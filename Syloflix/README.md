@@ -1,4 +1,27 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
+
+# SYLOFLIX #     
+
+〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
+
+/* Repositorio de Syloflix. */
+
+〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
+
+Integrantes:
+
+//Germán Marcelo Anselmo.
+
+//Noelia Jazmin Chavez.
+
+//Agustin Staiger. 
+
+〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
+=======
+>>>>>>> 86d38e8f282a3966576fd236a0d18ff24e0bdfb1
 # Syloflix
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
@@ -26,6 +49,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<<<<<<< HEAD
 =======
 〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
 
@@ -47,3 +71,6 @@ Integrantes:
 
 〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜〜
 >>>>>>> bdaca53f (foot/head)
+=======
+>>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
+>>>>>>> 86d38e8f282a3966576fd236a0d18ff24e0bdfb1
