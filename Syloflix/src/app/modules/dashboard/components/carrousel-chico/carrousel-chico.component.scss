@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-h1 {
-    font-size: 15rem;
-    background-color: greenyellow;
-}
-=======
-
 body {
-  background-color: black;
+  background-color: rgb(20, 20, 20);
 }
+
 .carrousel-chico {
-  background-color: black;
   margin-top:10px;
   margin-bottom: 10px;
+  overflow-x: none;
   }
   .slick-carousel {
     margin-top: 10px;
@@ -34,13 +28,17 @@ body {
   }
 
   i {
-    font-size: 20px;
-
+    transform: translate(0, -32%);
+    font-size: 40px;
   }
 
   .slick-prev {
     left: 0px;
     color:transparent;
+    height: 115px;
+    width: 100px;
+    border-radius: 0;
+    transform: translateY(-73px);
   }
 
   .slick-next {
@@ -85,13 +83,14 @@ body {
 
 .imagenesCarrusel {
   width:204.4px;
-  height:115 px;
+  height: 115px;
   border-radius: 4px;
 }
 
 .slick-prev:hover,
 .slick-next:hover {
-  color: #49A37B;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
   // color:white;
 }
 
@@ -100,4 +99,3 @@ h2 {
   margin-top: 10px;
   margin-left: 30px;
 }
->>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
