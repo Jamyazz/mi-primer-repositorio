@@ -1,6 +1,10 @@
 <div id="forms">
 
+<<<<<<< HEAD
     <form action="" id="formulario">
+=======
+    <form (ngSubmit)="submitForm()" #loginForm="ngForm" id="formulario">
+>>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
 
         <div id="low">
 
@@ -8,11 +12,21 @@
 
                 <h1>Inicia Sesión</h1>
 
+<<<<<<< HEAD
                 <input type="email" name="" #elcorreo id="mail" placeholder="Email o número de teléfono">
 
                 <input type="password" name="" #lapassword id="contrasenia" placeholder="Contraseña">
 
                 <button type="submit">Iniciar Sesión</button>
+=======
+                <p *ngIf="loginFalladito" id="loggeado" #loggeado>{{error}}</p>
+
+                <input type="email" name="mail" #elcorreo id="mail" placeholder="Email o número de teléfono" [(ngModel)]="mail" required>
+
+                <input type="password" name="contrasenia" #lapassword id="contrasenia" placeholder="Contraseña" [(ngModel)]="contrasenia" required>
+
+                <button type="submit">Iniciar sesión</button>
+>>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
 
                 <div id="recordarAyuda">
 

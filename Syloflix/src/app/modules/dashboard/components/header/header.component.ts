@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+<<<<<<< HEAD
 /*Poner funcionalidades */
+=======
+
+>>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
 }

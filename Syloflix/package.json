@@ -18,12 +18,21 @@
     "@angular/platform-browser": "^16.0.0",
     "@angular/platform-browser-dynamic": "^16.0.0",
     "@angular/router": "^16.0.0",
+<<<<<<< HEAD
+=======
+    "@types/glider-js": "^1.7.8",
+    "glider-js": "^1.7.8",
+>>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "@angular-devkit/build-angular": "^16.0.5",
+=======
+    "@angular-devkit/build-angular": "^16.1.0",
+>>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
     "@angular/cli": "~16.0.5",
     "@angular/compiler-cli": "^16.0.0",
     "@types/jasmine": "~4.3.0",
@@ -33,6 +42,10 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+<<<<<<< HEAD
+=======
+    "sass": "^1.43.4",
+>>>>>>> 5daf56d96cf6c9fb230bec6aea1493e57020e7c5
     "typescript": "~5.0.2"
   }
 }
