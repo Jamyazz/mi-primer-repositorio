@@ -1,8 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: SyloflixSans;
+    src: url('./assets/fonts/Netflix\ Sans\ Light.otf');
+}
+
+@font-face {
+    font-family: SyloflixSansBold;
+    src: url('./assets/fonts/Netflix\ Sans\ Bold.otf');
+}
+
+@font-face {
+    font-family: SyloflixSansMedium;
+    src: url('./assets/fonts/Netflix\ Sans\ Medium.otf');
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 62.5%;
-    font-family: 'Geologica', sans-serif;
+    font-family: SyloflixSans;
 }

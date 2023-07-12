@@ -9,6 +9,9 @@ import { CarrouselChicoComponent } from './components/carrousel-chico/carrousel-
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 
+import { DashboardService } from './services/dashboard.service';
+import { HttpClientModule } from '@angular/common/http';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +20,16 @@ import { HeaderComponent } from './components/header/header.component';
     CarrouselGrandeComponent,
     CarrouselChicoComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoaderComponent
   ],
   imports: [
     CommonModule,
-    DashboardRoutingModule
-  ]
+    DashboardRoutingModule,
+    HttpClientModule
+  ],
+  providers: [
+    DashboardService
+  ],
 })
 export class DashboardModule { }
