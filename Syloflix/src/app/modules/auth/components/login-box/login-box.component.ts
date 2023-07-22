@@ -20,10 +20,15 @@ export class LoginBoxComponent {
   error: string = '';
 
   submitForm() {
+    let miLista: any = [];
+    let listaJSON: any = JSON.stringify(miLista);
     if (this.mail === 'dev.team@syloflix.com' && this.contrasenia === 'syloflix') {
       // Loggeado.
       this.loginFalladito = false;
       localStorage.setItem('isLogged', 'true');
+      if (localStorage.getItem("myFavoriteList") === null) {
+        localStorage.setItem("myFavoriteList", listaJSON);
+      }
       this._router.navigate(['home']);
       console.log('Loggeado.');
     } else {

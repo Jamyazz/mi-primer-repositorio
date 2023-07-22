@@ -1,26 +1,67 @@
-<nav class="navbar navbar-expand-lg" style="width: 98vw; height: 6rem; position: absolute; z-index: 20; background-color: rgba(20, 20, 20, 0.3);">
-    <div class="row col container-fluid">
-      <div class="col-12 col-lg-4">
-        <a class="navbar-brand">
-          <img class="img-fluid" src="../../../assets/header/LOGOTIPO.png" alt="Logo de la pagina web" style="height: 5rem;"/>
-        </a>
+<header [ngClass]="{ 'header': true, 'scrolled': isScrolled }">
+  <nav>
+    <div id="headerLinks">
+      <div id="headerLogo">
+        <img routerLink="/home"
+          id="headerImage"
+          src="../../../assets/header/LOGOTIPO.png"
+          alt=""
+        />
       </div>
-      <div class="col-12 col-lg-8 d-flex align-items-center" id="navbarText">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-text">
-          <li class="nav-item">
-            <a class="nav-link boton-activado p-4" aria-current="page" href="#">
-              <h3>Listas</h3>
-            </a>
+
+      <div id="headerInternalLinks">
+        <ul id="headerList">
+          <li clasS="headerListElement">
+            <a routerLink="/home" class="headerAnchor">Home</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link boton-activado p-4" aria-current="page" href="#">
-              <h3>Series</h3>
-            </a>
+          <li clasS="headerListElement">
+            <a routerLink="/series" class="headerAnchor">TV Shows</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link boton p-4" href="/login"><h3>Usuario</h3></a>
+          <li clasS="headerListElement">
+            <a routerLink="/movies" class="headerAnchor">Movies</a>
+          </li>
+          <li clasS="headerListElement">
+            <a routerLink="/popular" class="headerAnchor">Recently Added</a>
+          </li>
+          <li clasS="headerListElement">
+            <a routerLink="/mylist" class="headerAnchor">MyList</a>
           </li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </div>
+
+    <div id="headerFunctions">
+      <div id="headersearchBar">
+        <!-- search bar -->
+        <i class="fa-solid fa-magnifying-glass" id="magnifying-glass"></i>
+        <form [formGroup]="searchForm" (ngSubmit)="searchMovieShow()">
+          <input name="input" id="searchInput" type="text" placeholder="Títulos" formControlName="searchInput">
+        </form>
+      </div>
+
+      <div id="headerPerfilDesplegable">
+        <img
+          id="headerImagenProfile"
+          src="../../../../../assets/header/profileIcon.png"
+          alt=""
+        />
+
+        <div id="headerProfileArrow">
+          ⠀<i class="fa-solid fa-caret-down" id="ArrowProfile"></i>
+        </div>
+          <dialog id="dialogProfile">
+            <ul id="desProfileList">
+              <li class="profileListElement"><i class="fa-solid fa-pencil" style="font-size: larger; padding-right: 1rem;"></i>Administrar Perfil</li>
+              <li class="profileListElement"><i class="fa-regular fa-user" style="font-size: larger; padding-right: 1rem;"></i>Cuenta</li>
+              <li class="profileListElement"><i class="fa-regular fa-circle-question" style="font-size: larger; padding-right: 1rem;"></i>Centro de ayuda</li>
+              <li class="profileListElement"><a class="headerprofileAnchor" id="anchorTop" (click)="salir()">Cerrar sesión en Syloflix
+                </a>
+              </li>
+            </ul>
+          </dialog>
+
+      </div>
+    </div>
+  </nav>
+  
+</header>

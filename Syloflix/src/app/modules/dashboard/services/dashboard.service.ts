@@ -1,11 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { timeout } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DashboardService {
+
+  movieserie = "";
 
   options = {
     headers: new HttpHeaders({
@@ -15,9 +18,45 @@ export class DashboardService {
   };
 
   uri = "https://api.themoviedb.org";
+  API_KEY = "935e414d7a03b83b6db715cd418ed046";
 
-  getMoviesPopular(): Observable<any> {
-    return this._HTTP.get(`${this.uri}/3/movie/popular`, this.options);
+
+  getSeriesAndMovies(seccion: string, index: string): Observable<any> {
+
+    let response$: any;
+
+    if (((index != "popular") && (seccion == "movie")) || (seccion == "tv")) {
+
+      response$ = this._HTTP.get(`${this.uri}/3/discover/${seccion}?page=${index}`, this.options);
+
+    } else if (index == "popular") {
+      
+      response$ = this._HTTP.get(`${this.uri}/3/${seccion}/${index}`, this.options);
+
+    }
+
+    return response$.pipe(
+
+      timeout(60000)
+      
+    );
+        
+  }
+
+  searchMovieShow(seriemovie: string): Observable<any> {
+
+    for (let i = 0; i < seriemovie.length; i++) {
+      if (seriemovie.substring(i, i + 1) == "_") {
+        this.movieserie += "+";
+      } else {
+        this.movieserie += seriemovie.substring(i, i + 1);
+      }
+    }
+    const searched$ = this._HTTP.get(`${this.uri}/3/search/movie?query='${this.movieserie}'&api_key='${this.API_KEY}'`, this.options)
+    return searched$.pipe(
+      timeout(60000)
+    );
+    
   }
 
   constructor(private _HTTP: HttpClient) { }

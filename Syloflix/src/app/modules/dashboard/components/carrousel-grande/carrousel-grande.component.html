@@ -2,14 +2,14 @@
 
 <div *ngIf="!isLoading" id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="1000" *ngFor="let imagen of imageResponse; let i = index">
-      <img [src]="imagen" class="d-block w-100 imagen" alt="...">
+    <div class="carousel-item active" data-bs-interval="1000" *ngFor="let movie of cardsData">
+      <img [src]="movie.image" class="d-block w-100 imagen" alt="{{ movie.title }}">
       <div class="carousel-caption d-none d-md-block">
-        <h3 class="titulo">{{ titleResponse[i] }}</h3>
+        <h3 class="titulo">{{ movie.title }}</h3>
         <!-- <p class="parrafo">{{ descriptionResponse[i] }}</p> -->
         <div class="links">
-          <a href="" class="reproducir"><i class="fa-sharp fa-solid fa-play"></i>⠀Reproducir</a>
-          <a href="" id="info" class="infoSerie"><img id="infoBtn" src="../../../../../assets/carrousel-grande/infoicon.png">⠀Más Información</a>
+          <a href="" class="reproducir"><i class="fa-sharp fa-solid fa-play"></i>⠀Play</a>
+          <a href="" id="info" class="infoSerie"><img id="infoBtn" src="../../../../../assets/carrousel-grande/infoicon.png">⠀More Information</a>
         </div>
       </div>
     </div>
