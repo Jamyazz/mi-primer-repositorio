@@ -23,11 +23,11 @@
     (scrolled)="onScroll()" class="search-results">
     <div class="imgBox" *ngFor="let movie of cardsData; ngForTrackBy:randomForYou">
       {{ randomForYou() }}
-      <img class="imagenCard" [src]="movie.image" alt="{{ movie.title }}">
+      <img class="imagenCard" routerLink="/watch" [src]="movie.image" alt="{{ movie.title }}">
       <div class="cardImg">
         <div class="playAddFavs">
           <div class="buttonsLeft">
-            <span class="material-symbols-outlined iconsPlay"> play_arrow </span>
+            <span class="material-symbols-outlined iconsPlay" routerLink="/watch"> play_arrow </span>
             <span *ngIf="!favorited(movie.title)" (click)="addToFavorite(movie)" class="material-symbols-outlined iconsAdd"> heart_plus </span>
             <i *ngIf="favorited(movie.title)" (click)="addToFavorite(movie)" class="fa-solid fa-heart iconsAdd chequed"></i>
           </div>

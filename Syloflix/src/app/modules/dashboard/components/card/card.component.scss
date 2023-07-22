@@ -102,6 +102,10 @@ main {
                             background-color: rgb(255, 255, 255);
                             cursor: pointer;
                             fill: 1;
+
+                            &:hover {
+                                background-color: gray;
+                            }
                         }
 
                         .iconsAdd{

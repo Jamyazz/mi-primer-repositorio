@@ -36,13 +36,13 @@ export class CardComponent implements OnInit {
   ngOnInit() {
     if (this.location.path() == "/movies") {
       this.collectionType = "Movies"
-      this.getSeriesAndMovies("movie", this.index);
+      this.getSeriesAndMovies("movie", this.index, "w300");
     } else if (this.location.path() == "/series") {
       this.collectionType = "TV Show"
-      this.getSeriesAndMovies("tv", this.index);
+      this.getSeriesAndMovies("tv", this.index, "w300");
     } else if (this.location.path() == "/popular") {
       this.collectionType = "Recently added"
-      this.getSeriesAndMovies("movie", "popular");
+      this.getSeriesAndMovies("movie", "popular", "w300");
     } else if (this.location.path() == "/mylist") {
       this.collectionType = "My list"
       this.getFavorites();        
@@ -56,17 +56,17 @@ export class CardComponent implements OnInit {
     if (this.location.path() == "/movies") {
       if (this.index < 5) {
         this.index += 1;
-        this.getSeriesAndMovies("movie", this.index);
+        this.getSeriesAndMovies("movie", this.index, "w300");
       }
     } else if (this.location.path() == "/series") {
       if (this.index < 5) {
         this.index += 1;
-        this.getSeriesAndMovies("tv", this.index);
+        this.getSeriesAndMovies("tv", this.index, "w300");
       }
     }
   }
 
-  getSeriesAndMovies(seccion: string, index: string) {
+  getSeriesAndMovies(seccion: string, index: string, size: string) {
     this.isLoading = true;
     this._dashboardservice.getSeriesAndMovies(seccion, index).subscribe(
       (response) => {
@@ -76,7 +76,7 @@ export class CardComponent implements OnInit {
           if (response.results[i].backdrop_path != null) {
             if (seccion == "movie") {
 
-              const imagePath = `https://image.tmdb.org/t/p/original${response.results[i].backdrop_path}`;
+              const imagePath = `https://image.tmdb.org/t/p/${size}${response.results[i].backdrop_path}`;
               const title = response.results[i].title;
               const date = response.results[i].release_date;
               const popularity = response.results[i].vote_average;
@@ -94,7 +94,7 @@ export class CardComponent implements OnInit {
               
             } else if (seccion == "tv") {
 
-              const imagePath = `https://image.tmdb.org/t/p/original${response.results[i].backdrop_path}`;
+              const imagePath = `https://image.tmdb.org/t/p/${size}${response.results[i].backdrop_path}`;
               const title = response.results[i].original_name;
               const date = response.results[i].first_air_date;
               const popularity = response.results[i].vote_average;
@@ -197,7 +197,7 @@ export class CardComponent implements OnInit {
     const response = await popularNews$.toPromise();
     for (let i = 0; i < response.results.length; i++) {
       if (response.results[i].backdrop_path != null) {
-        const imagePath = `https://image.tmdb.org/t/p/original${response.results[i].backdrop_path}`;
+        const imagePath = `https://image.tmdb.org/t/p/w300${response.results[i].backdrop_path}`;
         const title = response.results[i].title;
         const date = response.results[i].release_date;
         const popularity = response.results[i].vote_average;

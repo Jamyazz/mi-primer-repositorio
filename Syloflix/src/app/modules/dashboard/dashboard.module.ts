@@ -25,6 +25,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from './components/card/card.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { MylistComponent } from './views/mylist/mylist.component';
+import { WatchComponent } from './views/watch/watch.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { MylistComponent } from './views/mylist/mylist.component';
     SearchComponent,
 
     CardComponent,
-      MylistComponent
+      MylistComponent,
+      WatchComponent
   ],
   imports: [
     CommonModule,

@@ -7,6 +7,7 @@ import { MoviesComponent } from './views/movies/movies.component';
 import { PopularNewsComponent } from './views/popular-news/popular-news.component';
 import { SearchComponent } from './views/search/search.component';
 import { MylistComponent } from './views/mylist/mylist.component';
+import { WatchComponent } from './views/watch/watch.component';
 
 const routes: Routes = [
   {
@@ -43,6 +44,11 @@ const routes: Routes = [
     path: "mylist", 
     canActivate: [AuthGuard.AuthGuardActivate],
     component:MylistComponent,
+  },
+  { 
+    path: "watch", 
+    canActivate: [AuthGuard.AuthGuardActivate],
+    component:WatchComponent,
   },
 ];
 
