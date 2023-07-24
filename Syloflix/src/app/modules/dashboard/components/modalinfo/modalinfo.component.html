@@ -1,0 +1,54 @@
+<section *ngIf="peli == null"></section>
+
+<section *ngIf="peli != null" class="bigBox">
+  <div class="containerBox">
+    {{ randomForYou() }}
+    <div class="imageBoxBigContainer" style="background-image: linear-gradient(to bottom, transparent, rgba(20, 20, 20, 1)), url('{{ peli.image }}');">
+      <p (click)="destroyMovie()" class="closeButton"><i class="fa-solid fa-x"></i></p>
+
+      <div class="bottomItems">
+        <h3 class="titleBigBox">{{ peli.title }}</h3>
+
+        <div class="actionsBigBox">
+          <a href="" routerLink="/watch" class="reproducir"
+            ><i class="fa-sharp fa-solid fa-play"></i>⠀Play</a
+          >
+          <div class="buttonsLeft">
+            <span *ngIf="!favorited(peli.title)" (click)="addToFavorite(peli)" class="material-symbols-outlined iconsAdd"> heart_plus </span>
+            <i *ngIf="favorited(peli.title)" (click)="addToFavorite(peli)" class="fa-solid fa-heart iconsAdd chequed"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="infoBigBox">
+      <div class="leftBigBox">
+        <p class="forYou">
+          {{ percent }} % for you
+          <span class="material-symbols-outlined hdlogo">hd</span>
+        </p>
+        <p *ngIf="peli.review == ''" class="review">
+          Not available info. Contact with support if needed.
+        </p>
+        <p *ngIf="!(peli.review == '')" class="review">
+          {{ peli.review }}
+        </p>
+      </div>
+      <div class="rightBigBox">
+        <p class="infoSerieBigBox">
+          <span class="specifyInfo">Popular: </span>⠀{{ peli.popularity }}
+        </p>
+        <p class="infoSerieBigBox">
+          <span class="specifyInfo">Date: </span>⠀{{ peli.date }}
+        </p>
+        <p class="infoSerieBigBox">
+          <span class="specifyInfo">Title: </span>⠀{{ peli.title }}
+        </p>
+        <div class="endpointTitle">
+          <p (click)="searchMovieShow()" class="searchRelated">Search similar titles.</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</section>

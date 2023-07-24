@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { DashboardService } from '../../services/dashboard.service';
 import { FormControl } from '@angular/forms';
 import { Location } from '@angular/common';
@@ -9,7 +9,6 @@ import { Location } from '@angular/common';
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  isLoading: boolean = true;
   cardsData: any[] = [];
   originalCardsData: any[] = [];
   selectedOption: FormControl = new FormControl('Sugerencias para ti');
@@ -19,6 +18,8 @@ export class CardComponent implements OnInit {
   percent: number = 0;
   searchReload: string = "";
   searcheado: string = "";
+  peli: any;
+  isScrollDisabled: boolean = false;
 
   constructor(private _dashboardservice: DashboardService, private location: Location) {
     this.locationRoute = this.location.path();
@@ -36,13 +37,13 @@ export class CardComponent implements OnInit {
   ngOnInit() {
     if (this.location.path() == "/movies") {
       this.collectionType = "Movies"
-      this.getSeriesAndMovies("movie", this.index, "w300");
+      this.getSeriesAndMovies("movie", this.index);
     } else if (this.location.path() == "/series") {
       this.collectionType = "TV Show"
-      this.getSeriesAndMovies("tv", this.index, "w300");
+      this.getSeriesAndMovies("tv", this.index);
     } else if (this.location.path() == "/popular") {
       this.collectionType = "Recently added"
-      this.getSeriesAndMovies("movie", "popular", "w300");
+      this.getSeriesAndMovies("movie", "popular");
     } else if (this.location.path() == "/mylist") {
       this.collectionType = "My list"
       this.getFavorites();        
@@ -56,56 +57,63 @@ export class CardComponent implements OnInit {
     if (this.location.path() == "/movies") {
       if (this.index < 5) {
         this.index += 1;
-        this.getSeriesAndMovies("movie", this.index, "w300");
+        this.getSeriesAndMovies("movie", this.index);
       }
     } else if (this.location.path() == "/series") {
       if (this.index < 5) {
         this.index += 1;
-        this.getSeriesAndMovies("tv", this.index, "w300");
+        this.getSeriesAndMovies("tv", this.index);
       }
     }
   }
 
-  getSeriesAndMovies(seccion: string, index: string, size: string) {
-    this.isLoading = true;
+  getSeriesAndMovies(seccion: string, index: string) {
     this._dashboardservice.getSeriesAndMovies(seccion, index).subscribe(
       (response) => {
-        const movies1: { image: string; title: any; date: any; popularity: any }[] = [];
+        const movies1: { image: string; rezise: string; title: any; date: any; popularity: any; review: string; }[] = [];
     
         for (let i = 0; i < 19; i++) {
           if (response.results[i].backdrop_path != null) {
             if (seccion == "movie") {
 
-              const imagePath = `https://image.tmdb.org/t/p/${size}${response.results[i].backdrop_path}`;
+              const imagePath = `https://image.tmdb.org/t/p/original${response.results[i].backdrop_path}`;
+              const imageRezise = `https://image.tmdb.org/t/p/w500${response.results[i].backdrop_path}`;
               const title = response.results[i].title;
               const date = response.results[i].release_date;
               const popularity = response.results[i].vote_average;
               const movieExists = this.cardsData.some(movie => movie.title === title);
+              const review = response.results[i].overview;
 
               if (!movieExists) {
                 movies1.push({
                   image: imagePath,
+                  rezise: imageRezise,
                   title: title,
                   date: date,
                   popularity: popularity,
+                  review: review,
                 });
 
               }
               
             } else if (seccion == "tv") {
 
-              const imagePath = `https://image.tmdb.org/t/p/${size}${response.results[i].backdrop_path}`;
+              const imagePath = `https://image.tmdb.org/t/p/original${response.results[i].backdrop_path}`;
+              const imageRezise = `https://image.tmdb.org/t/p/w500${response.results[i].backdrop_path}`;
               const title = response.results[i].original_name;
               const date = response.results[i].first_air_date;
               const popularity = response.results[i].vote_average;
               const movieExists = this.cardsData.some(movie => movie.title === title);
+              const review = response.results[i].overview;
 
               if (!movieExists) {
                 movies1.push({
                   image: imagePath,
+                  rezise: imageRezise,
                   title: title,
                   date: date,
                   popularity: popularity,
+                  review: review,                  
                 });
                 
               }
@@ -119,11 +127,11 @@ export class CardComponent implements OnInit {
    
         this.cardsData = this.cardsData.concat(movies1);
         this.originalCardsData = this.originalCardsData.concat(movies1);
-        this.isLoading = false;
+
       },
       (error) => {
         console.error("Error loading movies:", error);
-        this.isLoading = false;
+
       }
     );
   }
@@ -190,25 +198,29 @@ export class CardComponent implements OnInit {
   }
 
   async getSearch() {
-    this.isLoading = true;
+
     const popularNews$ = this._dashboardservice.searchMovieShow(this.searchReload);
-    const movies1: { image: string; title: any; date: any; popularity: any }[] = [];
+    const movies1: { image: string; rezise: string; title: any; date: any; popularity: any; review: string; }[] = [];
   
     const response = await popularNews$.toPromise();
     for (let i = 0; i < response.results.length; i++) {
       if (response.results[i].backdrop_path != null) {
-        const imagePath = `https://image.tmdb.org/t/p/w300${response.results[i].backdrop_path}`;
+        const imagePath = `https://image.tmdb.org/t/p/original${response.results[i].backdrop_path}`;
+        const imageRezise = `https://image.tmdb.org/t/p/w500${response.results[i].backdrop_path}`;
         const title = response.results[i].title;
         const date = response.results[i].release_date;
         const popularity = response.results[i].vote_average;
+        const review = response.results[i].overview;
         const movieExists = this.cardsData.some(movie => movie.title === title);
   
         if (!movieExists) {
           movies1.push({
             image: imagePath,
+            rezise: imageRezise,
             title: title,
             date: date,
             popularity: popularity,
+            review: review,
           });
         }
       }
@@ -217,7 +229,7 @@ export class CardComponent implements OnInit {
     this.cardsData = this.cardsData.concat(movies1);
     this.originalCardsData = this.originalCardsData.concat(movies1);
   
-    this.isLoading = false;
+
   }
   
 
@@ -228,6 +240,24 @@ export class CardComponent implements OnInit {
       } else {
         this.searcheado += this.searchReload.substring(i, i + 1);
       }
+    }
+  }
+
+  passMovie(movie: any): void {
+
+    this.peli = movie;
+
+    this.isScrollDisabled = true;
+
+    document.body.classList.add('no-scroll');
+        
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: Event): void {
+    if (this.isScrollDisabled) {
+      event.preventDefault();
+      // this.peli = null;
     }
   }
   

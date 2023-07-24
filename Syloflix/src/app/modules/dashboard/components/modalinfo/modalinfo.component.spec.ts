@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LoaderComponent } from './loader.component';
+import { ModalinfoComponent } from './modalinfo.component';
 
-describe('LoaderComponent', () => {
-  let component: LoaderComponent;
-  let fixture: ComponentFixture<LoaderComponent>;
+describe('ModalinfoComponent', () => {
+  let component: ModalinfoComponent;
+  let fixture: ComponentFixture<ModalinfoComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [LoaderComponent]
+      declarations: [ModalinfoComponent]
     });
-    fixture = TestBed.createComponent(LoaderComponent);
+    fixture = TestBed.createComponent(ModalinfoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

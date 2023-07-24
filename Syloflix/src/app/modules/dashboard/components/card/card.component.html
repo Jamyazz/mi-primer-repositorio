@@ -1,6 +1,5 @@
-<app-loader *ngIf="isLoading"></app-loader>
-
-<main *ngIf="!isLoading">
+<main>
+  <app-modalinfo [peli]="peli"></app-modalinfo>
   <div id="titleOption">
     <h1 id="h1Movies">{{ collectionType }}</h1>
     <div id="divOption">
@@ -21,9 +20,9 @@
   </div>
   <div id="boxMovies" infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="1000"
     (scrolled)="onScroll()" class="search-results">
-    <div class="imgBox" *ngFor="let movie of cardsData; ngForTrackBy:randomForYou">
+    <div class="imgBox" *ngFor="let movie of cardsData;">
       {{ randomForYou() }}
-      <img class="imagenCard" routerLink="/watch" [src]="movie.image" alt="{{ movie.title }}">
+      <img class="imagenCard" routerLink="/watch" [src]="movie.rezise" alt="{{ movie.title }}">
       <div class="cardImg">
         <div class="playAddFavs">
           <div class="buttonsLeft">
@@ -31,7 +30,7 @@
             <span *ngIf="!favorited(movie.title)" (click)="addToFavorite(movie)" class="material-symbols-outlined iconsAdd"> heart_plus </span>
             <i *ngIf="favorited(movie.title)" (click)="addToFavorite(movie)" class="fa-solid fa-heart iconsAdd chequed"></i>
           </div>
-          <i class="fa-solid fa-chevron-down moreInfo"></i>
+          <i (click)="passMovie(movie)" class="fa-solid fa-chevron-down moreInfo"></i>
         </div>
         <p class="forYou">{{ percent }} % for you <span class="material-symbols-outlined hdlogo">hd</span></p>
         <p class="cardText">

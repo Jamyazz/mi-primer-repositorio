@@ -1,6 +1,4 @@
-<app-loader *ngIf="isLoading"></app-loader>
-
-<div *ngIf="!isLoading" id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="1000" *ngFor="let movie of cardsData">
       <img [src]="movie.image" class="d-block w-100 imagen" alt="{{ movie.title }}">
