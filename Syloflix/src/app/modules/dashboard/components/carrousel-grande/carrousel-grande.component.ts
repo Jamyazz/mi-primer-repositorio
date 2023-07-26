@@ -1,20 +1,54 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { DashboardService } from '../../services/dashboard.service';
+import { interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-carrousel-grande',
   templateUrl: './carrousel-grande.component.html',
   styleUrls: ['./carrousel-grande.component.scss']
 })
-export class CarrouselGrandeComponent implements OnInit {
+export class CarrouselGrandeComponent implements OnInit, AfterViewInit, OnDestroy {
   isLoading: boolean = true;
   cardsData: any[] = [];
+  @ViewChild('contenedor') containerRef!: ElementRef;
+  private intervalSubscription: Subscription | undefined;
 
   constructor(private _dashboardservice: DashboardService) {}
 
   ngOnInit() {
     this.getSeriesAndMovies("movie", "popular");
   }
+
+  ngAfterViewInit(): void {
+    const containerElement = this.containerRef.nativeElement as HTMLElement;
+    const firstElement = containerElement.firstChild as HTMLElement;
+    this.changeImageSlider();
+  }
+
+  changeImageSlider(): any {
+    const desordenarCardsData = () => {
+      this.cardsData = this.shuffleArray(this.cardsData);
+    };
+    this.intervalSubscription = interval(1000).subscribe(() => {
+      desordenarCardsData();
+    });
+  }
+
+  ngOnDestroy(): void {
+    if (this.intervalSubscription) {
+      this.intervalSubscription.unsubscribe();
+    }
+  }
+
+  private shuffleArray(array: any[]): any[] {
+    const shuffledArray = array.slice();
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    return shuffledArray;
+  }
+  
 
   getSeriesAndMovies(seccion: string, index: string) {
     this.isLoading = true;

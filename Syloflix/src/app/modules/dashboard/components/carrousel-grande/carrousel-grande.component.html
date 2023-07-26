@@ -1,21 +1,17 @@
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="1000" *ngFor="let movie of cardsData">
-      <img [src]="movie.image" class="d-block w-100 imagen" alt="{{ movie.title }}">
-      <div class="carousel-caption d-none d-md-block">
-        <h3 class="titulo">{{ movie.title }}</h3>
-        <!-- <p class="parrafo">{{ descriptionResponse[i] }}</p> -->
-        <div class="links">
-          <a href="" class="reproducir"><i class="fa-sharp fa-solid fa-play"></i>⠀Play</a>
-          <a href="" id="info" class="infoSerie"><img id="infoBtn" src="../../../../../assets/carrousel-grande/infoicon.png">⠀More Information</a>
-        </div>
+<div id="contenedor" #contenedor>
+  <div class="divContainer" *ngFor="let movie of cardsData; let isFirst = first" [style.display]="isFirst ? 'flex' : 'none'">
+    <div class="imagenCarGrande">
+      <img class="imagencitaCard" src="{{ movie.image }}" alt="">
+      <div class="gradiente"></div>
+    </div>    
+    <div class="contentSelect">
+      <h3 class="titulo">{{movie.title}}</h3>
+      <div class="links">
+        <a href="" routerLink="/watch" class="reproducir"><i class="fa-sharp fa-solid fa-play"></i>⠀Play</a>
+        <a href="" id="info" class="infoSerie"><img id="infoBtn" src="../../../../../assets/carrousel-grande/infoicon.png">⠀More Information</a>
       </div>
-    </div>
+    </div>  
   </div>  
-  <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span aria-hidden="true"><i class="fa-solid fa-arrow-left anterior"></i></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span aria-hidden="true"><i class="fa-solid fa-arrow-right proxima"></i></span>
-  </button> -->
 </div>
+
+<!-- style="background-image: linear-gradient(to bottom, transparent, rgba(20, 20, 20, 1)), url('{{ movie.image }}');" -->
