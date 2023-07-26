@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterViewInit, OnDestroy, HostListener } from '@angular/core';
 import { DashboardService } from '../../services/dashboard.service';
 import { interval, Subscription } from 'rxjs';
 
@@ -12,6 +12,8 @@ export class CarrouselGrandeComponent implements OnInit, AfterViewInit, OnDestro
   cardsData: any[] = [];
   @ViewChild('contenedor') containerRef!: ElementRef;
   private intervalSubscription: Subscription | undefined;
+  peli: any;
+  isScrollDisabled: boolean = false;
 
   constructor(private _dashboardservice: DashboardService) {}
 
@@ -29,7 +31,7 @@ export class CarrouselGrandeComponent implements OnInit, AfterViewInit, OnDestro
     const desordenarCardsData = () => {
       this.cardsData = this.shuffleArray(this.cardsData);
     };
-    this.intervalSubscription = interval(1000).subscribe(() => {
+    this.intervalSubscription = interval(10000).subscribe(() => {
       desordenarCardsData();
     });
   }
@@ -54,7 +56,7 @@ export class CarrouselGrandeComponent implements OnInit, AfterViewInit, OnDestro
     this.isLoading = true;
     this._dashboardservice.getSeriesAndMovies(seccion, index).subscribe(
       (response) => {
-        const movies1: { image: string; title: any; date: any; popularity: any }[] = [];
+        const movies1: { image: string; title: any; date: any; popularity: any, review: string; }[] = [];
     
         for (let i = 0; i < 19; i++) {
           if (response.results[i].backdrop_path != null) {
@@ -64,6 +66,7 @@ export class CarrouselGrandeComponent implements OnInit, AfterViewInit, OnDestro
             const date = response.results[i].release_date;
             const popularity = response.results[i].vote_average;
             const movieExists = this.cardsData.some(movie => movie.title === title);
+            const review = response.results[i].overview;
 
             if (!movieExists) {
               movies1.push({
@@ -71,6 +74,7 @@ export class CarrouselGrandeComponent implements OnInit, AfterViewInit, OnDestro
                 title: title,
                 date: date,
                 popularity: popularity,
+                review: review,
               });
 
             }
@@ -88,4 +92,23 @@ export class CarrouselGrandeComponent implements OnInit, AfterViewInit, OnDestro
       }
     );
   }
+
+  passMovie(movie: any): void {
+
+    this.peli = movie;
+
+    this.isScrollDisabled = true;
+
+    document.body.classList.add('no-scroll');
+        
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(event: Event): void {
+    if (this.isScrollDisabled) {
+      event.preventDefault();
+      // this.peli = null;
+    }
+  }
+
 }

@@ -21,7 +21,7 @@ export class HeaderComponent {
 
   salir(): void {
     localStorage.setItem('isLogged', 'false');
-    this._router.navigate(['']);
+    this._router.navigate(['/']);
   }
 
   @HostListener('window:scroll')

@@ -61,7 +61,7 @@
                 .titleBigBox{
                     font-family: SyloflixSansBold;
                     text-transform: uppercase;
-                    font-size: 1.8vw !important;
+                    font-size: 5rem !important;
                     color:white;
                     width: 50%;
                 }
@@ -240,6 +240,20 @@
     .bigBox {
 
         .containerBox {
+
+            .imageBoxBigContainer {
+
+                .bottomItems { 
+
+                    .titleBigBox{
+                        font-size: 2.6rem !important;
+
+                    }
+
+                }
+
+            }
+
     
             .infoBigBox{
                 flex-wrap: wrap;

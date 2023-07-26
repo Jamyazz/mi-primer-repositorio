@@ -1,17 +1,16 @@
+<app-modalinfo [peli]="peli"></app-modalinfo>
 <div id="contenedor" #contenedor>
   <div class="divContainer" *ngFor="let movie of cardsData; let isFirst = first" [style.display]="isFirst ? 'flex' : 'none'">
     <div class="imagenCarGrande">
-      <img class="imagencitaCard" src="{{ movie.image }}" alt="">
+      <img class="imagencitaCard" src="{{ movie.image }}" alt="{{ movie.image }}">
       <div class="gradiente"></div>
     </div>    
     <div class="contentSelect">
       <h3 class="titulo">{{movie.title}}</h3>
       <div class="links">
-        <a href="" routerLink="/watch" class="reproducir"><i class="fa-sharp fa-solid fa-play"></i>⠀Play</a>
-        <a href="" id="info" class="infoSerie"><img id="infoBtn" src="../../../../../assets/carrousel-grande/infoicon.png">⠀More Information</a>
+        <a routerLink="/watch" class="reproducir"><i class="fa-sharp fa-solid fa-play"></i>⠀Play</a>
+        <a (click)="passMovie(movie)" id="info" class="infoSerie"><img id="infoBtn" src="../../../../../assets/carrousel-grande/infoicon.png">⠀More Information</a>
       </div>
     </div>  
   </div>  
 </div>
-
-<!-- style="background-image: linear-gradient(to bottom, transparent, rgba(20, 20, 20, 1)), url('{{ movie.image }}');" -->
