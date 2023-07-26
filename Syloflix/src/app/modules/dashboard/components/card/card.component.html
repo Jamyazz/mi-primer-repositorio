@@ -22,7 +22,7 @@
     (scrolled)="onScroll()" class="search-results">
     <div class="imgBox" *ngFor="let movie of cardsData;">
       {{ randomForYou() }}
-      <img class="imagenCard" routerLink="/watch" [src]="movie.rezise" alt="{{ movie.title }}">
+      <img class="imagenCard" [src]="movie.rezise" alt="{{ movie.title }}">
       <div class="cardImg">
         <div class="playAddFavs">
           <div class="buttonsLeft">

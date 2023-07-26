@@ -11,6 +11,7 @@ export class HeaderComponent {
   isScrolled = false;
   searchForm: FormGroup;
   finalInput = "";
+  isMenuOpen = false;
 
   constructor(private _router: Router, private formBuilder: FormBuilder) {
     this.searchForm = this.formBuilder.group({
@@ -40,4 +41,5 @@ export class HeaderComponent {
       window.location.reload();
     });
   }
+  
 }

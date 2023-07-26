@@ -1,0 +1,30 @@
+<h2 class="titulo">Mi lista</h2>
+<div class="contenedor">
+  <div class="botones">
+    <button class="botonAtras" (click)="atras()">⠀⠀<i class="fa-solid fa-chevron-left"></i>⠀⠀</button>
+    <button class="botonAdelante" (click)="adelante()">⠀⠀<i class="fa-solid fa-chevron-right"></i>⠀⠀</button>
+  </div>
+  <div class="carrouselss" #carrousel>
+    <div class="images" *ngFor="let movie of cardsData;">
+      <img class="imagenCard" [src]="movie.rezise">
+      <div class="cardImg">
+        <div class="playAddFavs">
+          <i class="fa-solid fa-circle-play iconsPlay"></i>
+          <i class="fa-solid fa-circle-plus iconsAdd"></i>
+          <i class="fa-regular fa-thumbs-up iconsThumb"></i>
+          <i class="fa-brands fa-youtube"></i>
+        </div>
+        <p class="cardText">
+        </p>
+        <div class="containerText">
+          <p class="cardText">
+            <!-- <i class="fa-solid fa-calendar-days iconMoviesC"></i> -->
+          </p>
+          <p class="cardText">
+            <!-- <i class="fa-solid fa-star iconMoviesC"></i> -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

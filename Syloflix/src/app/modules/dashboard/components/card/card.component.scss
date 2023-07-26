@@ -11,7 +11,6 @@ main {
         transition: opacity 0.3s ease-out;
         transform: translateX(-5rem);
         z-index: 9999;
-        
     }
 
     #titleOption {
@@ -38,6 +37,7 @@ main {
             color: white;
             padding: 3rem;
             height: fit-content;
+            width: 100%;
             display: flex;
             justify-content: flex-end;
 
@@ -275,21 +275,23 @@ main {
             height: fit-content;
             width: 100%;
             padding-right: 4rem;
+            padding-top: 3rem;
+            justify-content: space-between;
+            background-color: rgb(20, 20, 20);
                 
             #h1Movies {
                 font-family: SyloflixSansMedium;
                 font-size: 1.8rem !important;
-                padding: 3rem 0 1rem;
+                padding: 1rem 0 1rem;
             }
     
             #divOption {
                 font-size: 2rem;
-                padding: 1rem 0 0 0;
-
+                padding: 1rem 0 1rem 0;
     
                 #selectOption {
                     font-size: 1.6rem;
-                    padding: 0 10rem 0 3rem;
+                    padding: 0 6rem 0 3rem;
     
                     .optionDrop{
                         font-size: 1.6rem;
@@ -323,90 +325,27 @@ main {
     
                         
                         .buttonsLeft{
-    
-                            .iconsPlay{
 
-                            }
-    
                             .iconsAdd{
                                 padding: 0.6rem;
 
-                          
-                                &:hover {
-
-                                }
                             }
-    
-                            .chequed {
 
-    
-                                &:hover {
-
-                                }
-    
-                            }
-    
                         }
-    
-                        .moreInfo {
 
-                            &:hover {
-
-    
-                            }
-                        }
-    
                     }
-    
-                    .forYou {
 
-    
-                        .hdlogo {
-
-                        }
-    
-                    }
-    
-                    .cardText {
-
-                        .iconMoviesC{
-
-                        }
-                    }
-    
-                    .containerText {
-
-                        .cardTextC {
-
-                                
-                        }
-    
-                    }
-                
                 }
     
-                &:hover{
+                &:active{
                     transform: scale(1.1) translateY(-11%);
 
-    
-                    .imagenCard{
-
-                    }
-    
-                    .cardImg {
-
-    
-                    }
                 }
     
             }
     
         } 
     
-        #errorCard {
-
-        }
-        
     }
 
 }
@@ -426,6 +365,8 @@ main {
             height: fit-content;
             width: 100%;
             padding-right: 4rem;
+            padding-top: 2rem;
+            justify-content: space-between;
                 
             #h1Movies {
                 font-family: SyloflixSansMedium;
@@ -466,96 +407,15 @@ main {
                     border-radius: 0;
 
                 }
-    
-                .cardImg {
-
-    
-                    .playAddFavs {
-    
-                        
-                        .buttonsLeft{
-    
-                            .iconsPlay{
-
-                            }
-    
-                            .iconsAdd{
-
-                          
-                                &:hover {
-
-                                }
-                            }
-    
-                            .chequed {
-
-    
-                                &:hover {
-
-                                }
-    
-                            }
-    
-                        }
-    
-                        .moreInfo {
-
-                            &:hover {
-
-    
-                            }
-                        }
-    
-                    }
-    
-                    .forYou {
-
-    
-                        .hdlogo {
-
-                        }
-    
-                    }
-    
-                    .cardText {
-
-                        .iconMoviesC{
-
-                        }
-                    }
-    
-                    .containerText {
-
-                        .cardTextC {
-
-                                
-                        }
-    
-                    }
-                
-                }
-    
+ 
                 &:hover{
                     transform: scale(1.2) translateY(-11%);
 
-    
-                    .imagenCard{
-
-                    }
-    
-                    .cardImg {
-
-    
-                    }
                 }
     
             }
     
         } 
-    
-        #errorCard {
-
-        }
         
     }
 
@@ -614,97 +474,15 @@ main {
                     border-radius: 0;
 
                 }
-    
-                .cardImg {
 
-    
-                    .playAddFavs {
-    
-                        
-                        .buttonsLeft{
-    
-                            .iconsPlay{
-
-                            }
-    
-                            .iconsAdd{
-
-                          
-                                &:hover {
-
-                                }
-                            }
-    
-                            .chequed {
-
-    
-                                &:hover {
-
-                                }
-    
-                            }
-    
-                        }
-    
-                        .moreInfo {
-
-                            &:hover {
-
-    
-                            }
-                        }
-    
-                    }
-    
-                    .forYou {
-
-    
-                        .hdlogo {
-
-                        }
-    
-                    }
-    
-                    .cardText {
-
-                        .iconMoviesC{
-
-                        }
-                    }
-    
-                    .containerText {
-
-                        .cardTextC {
-
-                                
-                        }
-    
-                    }
-                
-                }
-    
                 &:hover{
                     transform: scale(1.2) translateY(-11%);
-                    
 
-    
-                    .imagenCard{
-
-                    }
-    
-                    .cardImg {
-
-    
-                    }
                 }
     
             }
     
         } 
-    
-        #errorCard {
-
-        }
         
     }
 
@@ -767,94 +545,29 @@ main {
                 }
     
                 .cardImg {
-
     
                     .playAddFavs {
-    
                         
                         .buttonsLeft{
-    
-                            .iconsPlay{
-
-                            }
-    
-                            .iconsAdd{
-                                padding: 0.6rem;
-
-                          
-                                &:hover {
-
-                                }
-                            }
-    
+        
                             .chequed {
                                 padding: 0.5rem;
 
     
-                                &:hover {
-
-                                }
-    
                             }
-    
-                        }
-    
-                        .moreInfo {
 
-                            &:hover {
-
-    
-                            }
                         }
-    
+
                     }
-    
-                    .forYou {
 
-    
-                        .hdlogo {
-
-                        }
-    
-                    }
-    
-                    .cardText {
-
-                        .iconMoviesC{
-
-                        }
-                    }
-    
-                    .containerText {
-
-                        .cardTextC {
-
-                                
-                        }
-    
-                    }
-                
                 }
     
                 &:hover{
                     transform: scale(1.2) translateY(-11%);
 
-    
-                    .imagenCard{
-
-                    }
-    
-                    .cardImg {
-
-    
-                    }
                 }
-    
+
             }
-    
-        } 
-    
-        #errorCard {
 
         }
         
@@ -866,129 +579,8 @@ main {
 
     main {
 
-
-    
-        #titleOption {
-
-                
-            #h1Movies {
-
-            }
-    
-            #divOption {
-
-
-    
-                #selectOption {
-
-    
-                    .optionDrop{
-
-                    }
-    
-                }
-    
-            }
-    
-        }
-    
         #boxMovies {
             padding-top: 14rem;
-
-    
-            .imgBox {
-    
-                .imagenCard {
-
-
-                }
-    
-                .cardImg {
-
-    
-                    .playAddFavs {
-    
-                        
-                        .buttonsLeft{
-    
-                            .iconsPlay{
-
-                            }
-    
-                            .iconsAdd{
-
-                          
-                                &:hover {
-
-                                }
-                            }
-    
-                            .chequed {
-
-    
-                                &:hover {
-
-                                }
-    
-                            }
-    
-                        }
-    
-                        .moreInfo {
-
-                            &:hover {
-
-    
-                            }
-                        }
-    
-                    }
-    
-                    .forYou {
-
-    
-                        .hdlogo {
-
-                        }
-    
-                    }
-    
-                    .cardText {
-
-                        .iconMoviesC{
-
-                        }
-                    }
-    
-                    .containerText {
-
-                        .cardTextC {
-
-                                
-                        }
-    
-                    }
-                
-                }
-    
-                &:hover{
-
-    
-                    .imagenCard{
-
-                    }
-    
-                    .cardImg {
-
-    
-                    }
-                }
-    
-            }
-    
-        } 
-    
-        #errorCard {
 
         }
         
