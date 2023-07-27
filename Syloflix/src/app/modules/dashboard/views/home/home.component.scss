@@ -1,21 +1,29 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-size: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
 }
 
-.carrousel-grande-container {
+#carrouselgrande {
+  position: relative;
 }
 
-#carruschicos {
-    transform: translate(0, -8%);
-
-    .carrousel-chico-container {
-        transform: translate(0, -12%);
-        z-index: 1;
-        padding: 0 5rem 0 5rem;
-    }
-
+#carrouselchico {
+  position: absolute;
+  bottom: -14%;
+  z-index: 999999;
 }
 
+.carrousel-chico-container {
+  position: relative;
+  transform: translateY(13rem);
+  margin-top: 6rem;
+
+  &:hover {
+    z-index: 999;
+  }
+}
+#footer {
+    margin-top: 30rem;
+}

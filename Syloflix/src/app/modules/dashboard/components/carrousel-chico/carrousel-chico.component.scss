@@ -1,258 +1,221 @@
-body {
-    background-color: rgb(20, 20, 20);
-  }
-  
-  .contenedor {
-    // display: flex;
-    border-radius: 0.5rem;
-    overflow-x: hidden;
-    // position: relative;
-    // background-color: yellow;
-   
-  
-    .carrouselss {
-      width: fit-content;
-      display: flex;
-      flex-direction: row;
-      column-gap: 0.3vw;
-      overflow-x: hidden;
-      background-color: green;
-      height: 250px;
+app-modalinfo {
+  justify-self: center;
+  width: 100%;
+  position:fixed;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+  top: 2rem;
+  z-index: 9999;
+}
+
+.containerCarrucelito {
+    width: 100%;
+    padding: 0 0 0 4rem;
+
+    .miTitle {
+      font-size: 2.6rem; 
+      color: white; 
+      font-family: SyloflixSansMedium; 
     }
-  
-    .images {
-      width: fit-content;
-      border-radius: 0.5rem;
-      background-color: red;
-      height: 115px;
-      
-  
-      .imagenCard {
-        width: 204.4px;
-        height: 115px;
-        margin-top: 30px;
-        border-radius: 0.5rem;
+
+  .divImagenes {
+    display: inline-flex;
+    flex-direction: column;
+    width: calc(100% / 6.1);
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    transition: transform 0.2s ease;
+    transform-origin: center;
+    padding-right: 0.8rem;  
+    height: 17rem;
+
+    .imagen {
+      width: 100%;
+      height: auto;    
+    }
+
+    .cardImg {
+      background-color: rgb(20, 20, 20);
+      border-bottom-left-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      display: none;
+      transition: ease-out 5s;
+      padding: 2rem 1rem 1rem 1rem;
+      box-shadow: 0 0 1px 2px rgba(0, 0, 0, 1);
+
+      .playAddFavs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: white;
+        font-size: 4rem;
+        border-radius: 50%;
+
+        .buttonsLeft {
+          display: flex;
+          flex-direction: row;
+          column-gap: 1rem;
+
+          .iconsPlay {
+            color: black;
+            font-size: 2.6rem;
+            border-radius: 50%;
+            height: 3rem;
+            width: 3rem;
+            border-radius: 50%;
+            padding: 0.1rem 0 0 0.1rem;
+            border: solid 1px white;
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+            fill: 1;
+
+            &:hover {
+              background-color: gray;
+            }
+          }
+
+          .iconsAdd {
+            font-size: 1.8rem;
+            border-radius: 50%;
+            height: 3rem;
+            width: 3rem;
+            padding: 0.5rem 0.5rem 0.5rem 0.6rem;
+            border-radius: 50%;
+            border: solid 1px white;
+            cursor: pointer;
+
+            &:hover {
+              transform: scale(1.2);
+              transition: ease-in-out;
+              border-radius: 50%;
+              padding: 0.6rem;
+              height: 3rem;
+              background-color: rgb(48, 48, 48);
+            }
+          }
+
+          .chequed {
+            color: rgb(20, 20, 20);
+            background-color: white;
+            font-size: 1.8rem;
+            border-radius: 50%;
+            height: 3rem;
+            width: 3rem;
+            padding: 0.5rem;
+
+            &:hover {
+              background-color: white;
+              padding: 0.4rem;
+              font-size: 2rem;
+            }
+          }
+        }
+
+        .moreInfo {
+          color: white;
+          border: solid 1px white;
+          font-size: 1.8rem;
+          border-radius: 50%;
+          height: 3rem;
+          width: 3rem;
+          padding: 0.5rem;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgb(48, 48, 48);
+          }
+        }
+      }
+
+      .forYou {
+        font-family: SyloflixSans;
+        color: white;
+        font-size: 1.2rem;
+        color: rgb(70, 211, 105);
+        display: flex;
+        column-gap: 0.5rem;
+        align-items: center;
+        padding-top: 1rem;
+
+        .hdlogo {
+          color: white;
+          font-weight: 200;
+          font-size: 2.6rem;
+        }
+      }
+
+      .cardText {
+        font-family: SyloflixSans;
+        font-size: 1.2rem;
+        font-weight: 200;
+        color: white;
+
+        .iconMoviesC {
+          font-size: 1.3rem !important;
+          padding-right: 1rem;
+        }
+      }
+
+      .containerText {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .cardTextC {
+          font-family: SyloflixSansMedium;
+          font-size: 1.2rem !important;
+          color: white;
+          padding-right: 1rem;
+        }
+      }
+    }
+
+    &:hover {
+      transform: scale(1.2) translateY(-11%);
+
+      .imagen {
         border-radius: 0;
         border-top-left-radius: 0.5rem;
         border-top-right-radius: 0.5rem;
-        box-shadow:
-          0 0 1px 2px rgba(0, 0, 0, 1),
-          0 0 0 0 rgba(0, 0, 0, 1),
-          0 0 0 0 rgba(0, 0, 0, 1),
-          0 0 0 0 rgba(0, 0, 0, 1);
-        transition: box-shadow 0.3s ease;
-  
-        &:hover {
-          box-shadow:
-            0 0 1px 2px rgba(0, 0, 0, 1),
-            0 5px 15px rgba(0, 0, 0, 0.5);
-            transform: scale(1.3) translateY(-11%);
-            transform-origin: top center;
-            display: flex;
-        }
+        box-shadow: 0 0 1px 2px rgba(0, 0, 0, 1), 0 0 0 0 rgba(0, 0, 0, 1),
+          0 0 0 0 rgba(0, 0, 0, 1), 0 0 0 0 rgba(0, 0, 0, 1);
       }
-  
+
       .cardImg {
-        background-color: rgb(20, 20, 20);
-        border-bottom-left-radius: 0.5rem;
-        border-bottom-right-radius: 0.5rem;
-        display: none;
-        transition: ease-out 5s;
-        padding: 1rem 2rem;
-        box-shadow: 0 0 1px 2px rgba(0, 0, 0, 1);
-        position: fixed;
-        margin-left: 0px;
-        width: 204.4px;
-        margin-top:10px;
-  
-        .playAddFavs {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          color: white;
-          font-size: 3.5rem;
-          border-radius: 50%;
-          
-          
-          
-          .iconsPlay {
-            background-color: rgb(0, 0, 0);
-            border-radius: 50%;
-            margin-right: 10px;
-            
-          }
-          .iconsThumb {
-            background-color:transparent;
-            border-radius: 50%;
-            margin-left: 10px;
-            margin-right: 10px;
-           
-          }
-        }
-  
-        .cardText {
-          font-family: SyloflixSansMedium;
-          font-size: 1.4rem;
-          color: white;
-  
-          .iconMoviesC {
-            font-size: 1.3rem;
-            padding-right: 1rem;
-          }
-        }
-  
-        .containerText {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-  
-          .cardTextC {
-            font-family: SyloflixSansMedium;
-            font-size: 1.2rem;
-            color: white;
-            padding-right: 1rem;
-          }
-        }
-      }
-  
-      &:hover .cardImg {
-        transform: scale(1.3) translateY(-11%);
-        transform-origin: top center;
         display: flex;
-  
-        .imagenCard {
-          border-radius: 0;
-          border-top-left-radius: 0.5rem;
-          border-top-right-radius: 0.5rem;
-          box-shadow:
-            0 0 1px 2px rgba(0, 0, 0, 1),
-            0 0 0 0 rgba(0, 0, 0, 1),
-            0 0 0 0 rgba(0, 0, 0, 1),
-            0 0 0 0 rgba(0, 0, 0, 1);
-        }
-  
-        .cardImg {
-          display: flex;
-          flex-direction: column;
-          position: fixed;
-          width: 28rem;
-          transform-origin: top center;
-  
-          .iconsPlay:hover {
-            color: rgb(230, 230, 230);
-          }
-  
-          .iconsAdd:hover {
-            background-color: rgb(48, 48, 48);
-            border-radius: 50%;
-          }
-        }
-      }
-    }
-  
-    .botones {
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      z-index: 2;
-      
-  
-      .botonAtras {
-        font-size: 1rem;
-        height: 115px;
-        background-color: rgba(0, 0, 0, 0.1);
-        opacity: 0;
-        color: white;
-        border-style: none;
-  
-      .botonAdelante {
-          font-size: 1rem;
-          height: 115px;
-          background-color: rgba(0, 0, 0, 0.1);
-          opacity: 0;
-          color: white;
-          border-style: none;
-        
-        }
-  
-        &:hover {
-          color: white;
-          background-color: rgba(0, 0, 0, 0.7);
-          opacity: 1;
-          border-style: none;
-          width: 3rem;
-        }
+        flex-direction: column;
+        width: 100%;
       }
     }
   }
-  
-  h2 {
-    color: #E5E5E5;
-    font-size: 2.6rem;
-    font-family: SyloflixSansMedium;
-    padding: 6rem 0 1.6rem;
-  }
-  
-  .fa-chevron-left,
-  .fa-chevron-right {
+
+  .buttonCarruselito {
+    display: flex;
     font-size: 5rem;
-  }
-  
-  .imagenCard {
-    width: 28rem;
-    border-radius: 0;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    box-shadow:
-      0 0 1px 2px rgba(0, 0, 0, 1),
-      0 0 0 0 rgba(0, 0, 0, 1),
-      0 0 0 0 rgba(0, 0, 0, 1),
-      0 0 0 0 rgba(0, 0, 0, 1);
-  }
-  
-  .cardImg {
-    background-color: rgb(20, 20, 20);
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    display: none;
-    transition: ease-out 5s;
-    padding: 1rem 2rem;
-    box-shadow: 0 0 1px 2px rgba(0, 0, 0, 1);
-    position: fixed;
-  }
-  
-  .images:hover .cardImg {
-    transform: scale(1.3) translateY(-11%);
-    transform-origin: top center;
-  
-    .imagenCard {
-      border-radius: 0;
-      border-top-left-radius: 0.5rem;
-      border-top-right-radius: 0.5rem;
-      box-shadow:
-        0 0 1px 2px rgba(0, 0, 0, 1),
-        0 0 0 0 rgba(0, 0, 0, 1),
-        0 0 0 0 rgba(0, 0, 0, 1),
-        0 0 0 0 rgba(0, 0, 0, 1);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 6.1rem;
+    position: absolute;
+    bottom: 0;
+    height: 17.2rem;
+    align-items: center;
+    text-align: center;
+    border-style: none;
+    padding: 0.5rem;
+    opacity: 0;
+    justify-content: center;
+
+    &:hover {
+        opacity: 1;
     }
-  
-    .cardImg {
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      width: 28rem;
-      transform-origin: top center;
-  
-      .iconsPlay:hover {
-        color: rgb(230, 230, 230);
-      }
-  
-      .iconsAdd:hover {
-        background-color: rgb(48, 48, 48);
-        border-radius: 50%;
   }
+
+  #buttonBack {
+    left: 0;
+
   }
+
+  #buttonBFordward {
+    right: 0;
   }
+}
