@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="width: 98vw; height: 6rem; position: absolute; z-index: 20; background-color: rgba(20, 20, 20, 0.3);">
   <div class="row col container-fluid">
     <div class="col-12 col-lg-4">
@@ -53,3 +54,73 @@
     </div>
   </div>
   </nav>
+=======
+<header [ngClass]="{ 'header': true, 'scrolled': isScrolled }">
+  <nav>
+    <div id="headerLinks">
+      <div id="headerLogo">
+        <img routerLink="/home"
+          id="headerImage"
+          src="../../../assets/header/LOGOTIPO.png"
+          alt=""
+        />
+      </div>
+
+      <div id="headerInternalLinks">
+        <p id="dropShowLinks">Explorar⠀<i class="fa-solid fa-caret-down"></i></p>
+        <ul id="headerList">
+          <li clasS="headerListElement">
+            <a routerLink="/home" class="headerAnchor">Home</a>
+          </li>
+          <li clasS="headerListElement">
+            <a routerLink="/series" class="headerAnchor">TV Shows</a>
+          </li>
+          <li clasS="headerListElement">
+            <a routerLink="/movies" class="headerAnchor">Movies</a>
+          </li>
+          <li clasS="headerListElement">
+            <a routerLink="/popular" class="headerAnchor">Recently Added</a>
+          </li>
+          <li clasS="headerListElement">
+            <a routerLink="/mylist" class="headerAnchor">MyList</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="headerFunctions">
+      <div id="headersearchBar">
+        <!-- search bar -->
+        <i class="fa-solid fa-magnifying-glass" id="magnifying-glass"></i>
+        <form [formGroup]="searchForm" (ngSubmit)="searchMovieShow()">
+          <input name="input" id="searchInput" type="text" placeholder="Títulos" formControlName="searchInput">
+        </form>
+      </div>
+
+      <div id="headerPerfilDesplegable">
+        <img
+          id="headerImagenProfile"
+          src="../../../../../assets/header/profileIcon.png"
+          alt=""
+        />
+
+        <div id="headerProfileArrow">
+          ⠀<i class="fa-solid fa-caret-down" id="ArrowProfile"></i>
+        </div>
+          <dialog id="dialogProfile">
+            <ul id="desProfileList">
+              <li class="profileListElement" routerLink="/not-found"><i class="fa-solid fa-pencil" routerLink="/not-found" style="font-size: larger; padding-right: 1rem;"></i>Administrar Perfil</li>
+              <li class="profileListElement" routerLink="/not-found"><i class="fa-regular fa-user" routerLink="/not-found" style="font-size: larger; padding-right: 1rem;"></i>Cuenta</li>
+              <li class="profileListElement" routerLink="/not-found"><i class="fa-regular fa-circle-question" routerLink="/not-found" style="font-size: larger; padding-right: 1rem;"></i>Centro de ayuda</li>
+              <li class="profileListElement" routerLink="/not-found"><a class="headerprofileAnchor" id="anchorTop" (click)="salir()">Cerrar sesión en Syloflix
+                </a>
+              </li>
+            </ul>
+          </dialog>
+
+      </div>
+    </div>
+  </nav>
+  
+</header>
+>>>>>>> 9d2cb5cdefae48e5939ad383b28fd3311a2d919d

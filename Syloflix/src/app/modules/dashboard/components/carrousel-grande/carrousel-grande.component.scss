@@ -1,136 +1,310 @@
-* {
-  font-size: 1.6rem !important;
-}
-
-.carousel {
-  margin: auto;
-  overflow-x: none;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
-}
-.carousel-inner {
-  height: 100vh;
+app-modalinfo {
+  justify-self: center;
   width: 100%;
+  position:fixed;
+  opacity: 1;
+  transition: opacity 0.3s ease-out;
+  top: 2rem;
+  z-index: 9999;
 }
 
-.carousel-caption {
-  left: 3vw;
-  width: 30%;
-  // transform: translate(0, -50%);
-  bottom: 17vw;
-  border-radius: 0.5rem;
-}
-
-// .carousel-control-prev, .carousel-control-next {
-//   width: 5rem;
-// }
-
-// .anterior, .proxima {
-//   font-size: 3rem !important;
-//   opacity: 0;
-// }
-
-// .anterior:hover,
-// .proxima:hover {
-//   display: flex;
-//   background-color: rgba(255, 255, 255, 0.3);
-//   padding: 2rem;
-//   border-radius: 50%;
-//   padding: 0.8rem;
-//   align-self:center;
-// }
-
-// #carouselExampleCaptions:hover .anterior,
-// #carouselExampleCaptions:hover .proxima {
-//   opacity: 1;
-// }
-
-.parrafo {
-  font-size: 1.8rem !important;
-  padding: 0.4rem 0 1rem;
-  line-height: 1.8rem;
-  line-height: 3rem;
-  text-align: justify;
-}
-
-.titulo {
-  font-family: SyloflixSansBold;
-  text-transform: uppercase;
-  font-size: 4.6vw !important;
-  text-align: left;
-  padding-bottom: 1vw;
-  //font-family: 'Crazy', sans-serif;
-  color:rgba(254, 254, 254, 1);
-  transform: rotate(70);
-  text-shadow: none;
-}
-
-.links {
-  display: flex;
-  flex-direction: row;
-  column-gap: 0.8vw;
-  font-size: 1vw;
-  height: 4.5vw;
-}
-
-.links a {
+#contenedor {
+  width: 100%;
   height: fit-content;
-  font-family: SyloflixSansMedium;
-  width: fit-content;
-  text-decoration: none;
-  padding: 0.5vw 1.5vw 0.5vw 1.5vw;
-  border-radius: 0.5rem;
-  text-shadow: none;
-  font-size: 1.2vw !important;
+
+  .divContainer {
+    width: 100%;
+    height: auto;
+
+    .imagenCarGrande {
+      width: 100%;
+      height: auto;
+
+      .imagencitaCard {
+        width: 100%;
+        height: 100vh;
+      }
+
+      .gradiente {
+        background-color: transparent;
+        background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+        background-position: 0 top;
+        background-repeat: repeat-x;
+        background-size: 100% 100%;
+        bottom: -1px;
+        height: 14.7vw;
+        opacity: 1;
+        top: auto;
+        width: 100%;
+        position: absolute;
+        padding: 0 4%;
+      }
+
+    }    
+
+    .contentSelect {
+      display: flex;
+      height: 72vh;
+      flex-direction: column;
+      justify-content: flex-end;
+      position: absolute;
+      padding: 0 5rem;
+
+
+      .titulo {
+        font-size: 7rem;
+        color: white;
+        width: 60%;
+        text-transform: uppercase;
+        font-family: SyloflixSansMedium;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+      }
+
+      .links {
+        display: flex;
+        column-gap: 1.5rem;
+
+
+        .reproducir {
+          background-color: rgba(255, 255, 255, 1);
+          font-size: 2.6rem;
+          color: black;
+          text-decoration: none;
+          padding: 1rem 7rem;
+          font-family: SyloflixSansMedium;
+          border-radius: 0.5rem;
+          display: flex;
+          align-items: center;
+          width: fit-content;
+          box-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+          cursor: pointer;
+          
+          &:hover {
+            background-color: rgb(195, 194, 193);
+          }
+
+          .fa-play {
+            font-size: 3.2rem;
+          }
+
+        }
+
+        .infoSerie {
+          color: white;
+          font-size: 2.6rem;
+          background-color: rgba(68, 65, 68, 0.8);
+          display: flex;
+          justify-content: center;
+          box-shadow: 2px 2px rgba(0, 0, 0, 0.8);
+          text-decoration: none;
+          padding: 1rem 3rem;
+          font-family: SyloflixSansMedium;
+          border-radius: 0.5rem;
+          display: flex;
+          cursor: pointer;
+
+          &:hover {
+            background-color: rgb(81, 75, 77);
+          }
+
+          #infoBtn {
+            width: 1.8vw;
+            height: 1.8vw;
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+          }
+
+        }
+
+      }
+    }
+  }
 }
 
-.reproducir {
-  font-size: 100%;
-  color: black;
-  background-color: rgba(255, 255, 255, 1);
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-.reproducir:hover {
-  background-color: rgb(195, 194, 193);
-}
-
-.fa-play {
-  transform: translate(0, 0);
-  font-size: 1.8vw !important;
-}
-
-.infoSerie {
-  color: white;
-  background-color: rgb(81, 75, 77);
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-}
-
-.infoSerie:hover {
-  background-color: rgba(68, 65, 68, 0.9);
-}
-
-#infoBtn {
-  width: 1.8vw; 
-  height: 1.8vw;
-  display:flex; 
-  flex-direction: row; 
-  align-self: center;
-}
-
-#info {
-  display: flex;
-  flex-direction: row;
-  column-gap: 0.3rem;
-}
-
-
-#opacidad {
+@media screen and (max-width: 800px) {
+  #contenedor {
+    width: 100%;
+    height: fit-content;
   
-  flex: 1;
+    .divContainer {
+      width: 100%;
+      height: auto;
+  
+      .imagenCarGrande {
+        width: 100%;
+        height: auto;
+  
+        .imagencitaCard {
+          width: 100%;
+          height: auto;
+        }
+  
+        .gradiente {
+          background-color: transparent;
+          background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+          background-position: 0 top;
+          background-repeat: repeat-x;
+          background-size: 100% 100%;
+          height: 14.7vw;
+          opacity: 1;
+          top: 43.7vw;
+          width: 100%;
+          position: absolute;
+          padding: 0 4%;
+        }
+  
+      }    
+  
+      .contentSelect {
+        height: 47vw;
+        padding: 0 2rem;
+  
+  
+        .titulo {
+          font-size: 2rem;
+        }
+  
+        .links {
+          column-gap: 0.8rem;  
+  
+          .reproducir {
+            font-size: 1rem;
+            padding: 0.5rem 4rem;
+  
+            .fa-play {
+              font-size: 1.3rem;
+            }
+  
+          }
+  
+          .infoSerie {
+            font-size: 1rem;
+            padding: 0.5rem 1.2rem;
+            display: flex;
+            align-items: center;
+  
+            #infoBtn {
+              width: 1.2rem;
+              height: 1.2rem;
+            }
+  
+          }
+  
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+  #contenedor {
+    width: 100%;
+    height: fit-content;
+  
+    .divContainer {
+      width: 100%;
+      height: auto;
+  
+      .imagenCarGrande {
+        width: 100%;
+        height: auto;
+  
+        .imagencitaCard {
+          width: 100%;
+          height: auto;
+        }
+  
+        .gradiente {
+          background-color: transparent;
+          background-image: linear-gradient(180deg,hsla(0,0%,8%,0) 0,hsla(0,0%,8%,.15) 15%,hsla(0,0%,8%,.35) 29%,hsla(0,0%,8%,.58) 44%,#141414 68%,#141414);
+          background-position: 0 top;
+          background-repeat: repeat-x;
+          background-size: 100% 100%;
+
+          height: 14.7vw;
+          opacity: 1;
+          top: 43.7vw;
+          width: 100%;
+          position: absolute;
+          padding: 0 4%;
+        }
+  
+      }    
+  
+      .contentSelect {
+        height: 47vw;
+        padding: 0 3rem;
+  
+  
+        .titulo {
+          font-size: 5rem;
+        }
+  
+        .links {
+          column-gap: 0.8rem;
+  
+  
+          .reproducir {
+            font-size: 1.2rem;
+            padding: 0.8rem 5rem;
+  
+            .fa-play {
+              font-size: 2rem;
+            }
+  
+          }
+  
+          .infoSerie {
+            font-size: 1.2rem;
+            padding: 0.8rem 1.5rem;
+  
+            #infoBtn {
+              width: 1.8rem;
+              height: 1.8rem;
+            }
+  
+          }
+  
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  #contenedor {
+    .divContainer {
+      .contentSelect {
+        height: 70vh;
+        padding: 0 3rem;
+  
+        .titulo {
+          font-size: 6rem;
+        }
+  
+        .links {
+          column-gap: 1rem;
+  
+  
+          .reproducir {
+            font-size: 1.6rem;
+            padding: 0.8rem 5.5rem;
+
+            .fa-play {
+              font-size: 2.6rem;
+            }
+  
+          }
+  
+          .infoSerie {
+            font-size: 1.6rem;
+            padding: 0.8rem 1.5rem;
+  
+          }
+  
+        }
+      }
+    }
+  }
 }

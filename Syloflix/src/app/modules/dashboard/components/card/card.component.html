@@ -1,0 +1,52 @@
+<main>
+  <app-modalinfo [peli]="peli"></app-modalinfo>
+  <div id="titleOption">
+    <h1 id="h1Movies">{{ collectionType }}</h1>
+    <div id="divOption">
+      <select name="" id="selectOption" [formControl]="selectedOption" (change)="orderCards()">
+        <option *ngIf="locationRoute !== '/mylist'" value="Sugerencias para ti" class="optionDrop">
+          Suggestions for you
+        </option>
+        <option *ngIf="locationRoute === '/mylist'" value="OrderBy" class="optionDrop">
+          Order by...
+        </option>
+        <option value="Año de lanzamiento" class="optionDrop">
+          Release Date
+        </option>
+        <option value="A-Z" class="optionDrop">A-Z</option>
+        <option value="Z-A" class="optionDrop">Z-A</option>
+      </select>
+    </div>
+  </div>
+  <div id="boxMovies" infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="1000"
+    (scrolled)="onScroll()" class="search-results">
+    <div class="imgBox" *ngFor="let movie of cardsData;">
+      {{ randomForYou() }}
+      <img class="imagenCard" [src]="movie.rezise" alt="{{ movie.title }}">
+      <div class="cardImg">
+        <div class="playAddFavs">
+          <div class="buttonsLeft">
+            <span class="material-symbols-outlined iconsPlay" routerLink="/watch"> play_arrow </span>
+            <span *ngIf="!favorited(movie.title)" (click)="addToFavorite(movie)" class="material-symbols-outlined iconsAdd"> heart_plus </span>
+            <i *ngIf="favorited(movie.title)" (click)="addToFavorite(movie)" class="fa-solid fa-heart iconsAdd chequed"></i>
+          </div>
+          <i (click)="passMovie(movie)" class="fa-solid fa-chevron-down moreInfo"></i>
+        </div>
+        <p class="forYou">{{ percent }} % for you <span class="material-symbols-outlined hdlogo">hd</span></p>
+        <p class="cardText">
+          <i class="fa-solid fa-tv iconMoviesC"></i>{{ movie.title }}
+        </p>
+        <div class="containerText">
+          <p class="cardText">
+            <i class="fa-solid fa-calendar-days iconMoviesC"></i>
+            {{ movie.date }}
+          </p>
+          <p class="cardText">
+            <i class="fa-solid fa-star iconMoviesC"></i>
+            {{ movie.popularity }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

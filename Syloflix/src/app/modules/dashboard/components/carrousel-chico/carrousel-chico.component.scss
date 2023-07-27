@@ -1,78 +1,258 @@
 body {
-  background-color: rgb(20, 20, 20);
-}
-
-.contenedor {
-  border-radius: 0.5rem;
-  overflow-x: hidden;
-  position: relative;
-}
-
-.carrouselss {
-  width: fit-content;
-  display: flex;
-  flex-direction: row;
-  column-gap: 0.3vw;
-  overflow-x: hidden;
-}
-
-.images {
-  width: fit-content;
-  border-radius: 0.5rem;
-}
-
-.img-thumbnailes {
-  width: 300px;
-  height: 165px;
-  border-radius: 0.5rem;
-}
-
-.botones {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-}
-.boton {
-  font-size: 2rem !important;
-  height: 165px;
-  background-color: rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  color: white;
-  border-style: none;
+    background-color: rgb(20, 20, 20);
+  }
   
-}
-
-.boton:hover {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 1;
-  border-style: none;
-  width: 10rem;
-
-}
-
-.dr {
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-}
-
-.iq {
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
-}
-
-
-h2 {
-  color: #E5E5E5;
-  font-size: 2.6rem;
-  font-family: SyloflixSansMedium;
-  padding: 6rem 0 1.6rem;
-}
-
-.fa-chevron-left, .fa-chevron-right {
-  font-size: 5rem;
-}
+  .contenedor {
+    // display: flex;
+    border-radius: 0.5rem;
+    overflow-x: hidden;
+    // position: relative;
+    // background-color: yellow;
+   
+  
+    .carrouselss {
+      width: fit-content;
+      display: flex;
+      flex-direction: row;
+      column-gap: 0.3vw;
+      overflow-x: hidden;
+      background-color: green;
+      height: 250px;
+    }
+  
+    .images {
+      width: fit-content;
+      border-radius: 0.5rem;
+      background-color: red;
+      height: 115px;
+      
+  
+      .imagenCard {
+        width: 204.4px;
+        height: 115px;
+        margin-top: 30px;
+        border-radius: 0.5rem;
+        border-radius: 0;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        box-shadow:
+          0 0 1px 2px rgba(0, 0, 0, 1),
+          0 0 0 0 rgba(0, 0, 0, 1),
+          0 0 0 0 rgba(0, 0, 0, 1),
+          0 0 0 0 rgba(0, 0, 0, 1);
+        transition: box-shadow 0.3s ease;
+  
+        &:hover {
+          box-shadow:
+            0 0 1px 2px rgba(0, 0, 0, 1),
+            0 5px 15px rgba(0, 0, 0, 0.5);
+            transform: scale(1.3) translateY(-11%);
+            transform-origin: top center;
+            display: flex;
+        }
+      }
+  
+      .cardImg {
+        background-color: rgb(20, 20, 20);
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        display: none;
+        transition: ease-out 5s;
+        padding: 1rem 2rem;
+        box-shadow: 0 0 1px 2px rgba(0, 0, 0, 1);
+        position: fixed;
+        margin-left: 0px;
+        width: 204.4px;
+        margin-top:10px;
+  
+        .playAddFavs {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          color: white;
+          font-size: 3.5rem;
+          border-radius: 50%;
+          
+          
+          
+          .iconsPlay {
+            background-color: rgb(0, 0, 0);
+            border-radius: 50%;
+            margin-right: 10px;
+            
+          }
+          .iconsThumb {
+            background-color:transparent;
+            border-radius: 50%;
+            margin-left: 10px;
+            margin-right: 10px;
+           
+          }
+        }
+  
+        .cardText {
+          font-family: SyloflixSansMedium;
+          font-size: 1.4rem;
+          color: white;
+  
+          .iconMoviesC {
+            font-size: 1.3rem;
+            padding-right: 1rem;
+          }
+        }
+  
+        .containerText {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+  
+          .cardTextC {
+            font-family: SyloflixSansMedium;
+            font-size: 1.2rem;
+            color: white;
+            padding-right: 1rem;
+          }
+        }
+      }
+  
+      &:hover .cardImg {
+        transform: scale(1.3) translateY(-11%);
+        transform-origin: top center;
+        display: flex;
+  
+        .imagenCard {
+          border-radius: 0;
+          border-top-left-radius: 0.5rem;
+          border-top-right-radius: 0.5rem;
+          box-shadow:
+            0 0 1px 2px rgba(0, 0, 0, 1),
+            0 0 0 0 rgba(0, 0, 0, 1),
+            0 0 0 0 rgba(0, 0, 0, 1),
+            0 0 0 0 rgba(0, 0, 0, 1);
+        }
+  
+        .cardImg {
+          display: flex;
+          flex-direction: column;
+          position: fixed;
+          width: 28rem;
+          transform-origin: top center;
+  
+          .iconsPlay:hover {
+            color: rgb(230, 230, 230);
+          }
+  
+          .iconsAdd:hover {
+            background-color: rgb(48, 48, 48);
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  
+    .botones {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 2;
+      
+  
+      .botonAtras {
+        font-size: 1rem;
+        height: 115px;
+        background-color: rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        color: white;
+        border-style: none;
+  
+      .botonAdelante {
+          font-size: 1rem;
+          height: 115px;
+          background-color: rgba(0, 0, 0, 0.1);
+          opacity: 0;
+          color: white;
+          border-style: none;
+        
+        }
+  
+        &:hover {
+          color: white;
+          background-color: rgba(0, 0, 0, 0.7);
+          opacity: 1;
+          border-style: none;
+          width: 3rem;
+        }
+      }
+    }
+  }
+  
+  h2 {
+    color: #E5E5E5;
+    font-size: 2.6rem;
+    font-family: SyloflixSansMedium;
+    padding: 6rem 0 1.6rem;
+  }
+  
+  .fa-chevron-left,
+  .fa-chevron-right {
+    font-size: 5rem;
+  }
+  
+  .imagenCard {
+    width: 28rem;
+    border-radius: 0;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    box-shadow:
+      0 0 1px 2px rgba(0, 0, 0, 1),
+      0 0 0 0 rgba(0, 0, 0, 1),
+      0 0 0 0 rgba(0, 0, 0, 1),
+      0 0 0 0 rgba(0, 0, 0, 1);
+  }
+  
+  .cardImg {
+    background-color: rgb(20, 20, 20);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    display: none;
+    transition: ease-out 5s;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 1px 2px rgba(0, 0, 0, 1);
+    position: fixed;
+  }
+  
+  .images:hover .cardImg {
+    transform: scale(1.3) translateY(-11%);
+    transform-origin: top center;
+  
+    .imagenCard {
+      border-radius: 0;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+      box-shadow:
+        0 0 1px 2px rgba(0, 0, 0, 1),
+        0 0 0 0 rgba(0, 0, 0, 1),
+        0 0 0 0 rgba(0, 0, 0, 1),
+        0 0 0 0 rgba(0, 0, 0, 1);
+    }
+  
+    .cardImg {
+      display: flex;
+      flex-direction: column;
+      position: fixed;
+      width: 28rem;
+      transform-origin: top center;
+  
+      .iconsPlay:hover {
+        color: rgb(230, 230, 230);
+      }
+  
+      .iconsAdd:hover {
+        background-color: rgb(48, 48, 48);
+        border-radius: 50%;
+  }
+  }
+  }
