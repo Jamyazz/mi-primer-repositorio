@@ -9,21 +9,18 @@
   position: relative;
 }
 
-#carrouselchico {
-  position: absolute;
-  bottom: -14%;
-  z-index: 999999;
-}
-
-.carrousel-chico-container {
+#carrousel-chico-container{
   position: relative;
-  transform: translateY(13rem);
-  margin-top: 6rem;
-
-  &:hover {
-    z-index: 999;
-  }
+    margin-top: -8rem;
 }
-#footer {
-    margin-top: 30rem;
+
+#carruschicos {
+  .carrousel-chico-container {
+    position: relative;
+    margin-top: 6rem;
+  
+    &:hover {
+      z-index: 998;
+    }
+  }
 }
