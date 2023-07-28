@@ -1,8 +1,8 @@
 <h2 class="titulo">Mi lista</h2>
 <div class="contenedor">
   <div class="botones">
-    <button class="botonAtras" (click)="atras()">⠀⠀<i class="fa-solid fa-chevron-left"></i>⠀⠀</button>
-    <button class="botonAdelante" (click)="adelante()">⠀⠀<i class="fa-solid fa-chevron-right"></i>⠀⠀</button>
+    <button class="botonAtras" (click)="atras()"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="botonAdelante" (click)="adelante()"><i class="fa-solid fa-chevron-right"></i></button>
   </div>
   <div class="carrouselss" #carrousel>
     <div class="images" *ngFor="let movie of cardsData;">
@@ -26,5 +26,5 @@
         </div>
       </div>
     </div>
-  </div>
+</div>
 </div>

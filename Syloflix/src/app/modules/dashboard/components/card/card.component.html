@@ -18,7 +18,7 @@
       </select>
     </div>
   </div>
-  <div id="boxMovies" infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="1000"
+  <div id="boxMovies" infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="1000">
     (scrolled)="onScroll()" class="search-results">
     <div class="imgBox" *ngFor="let movie of cardsData;">
       {{ randomForYou() }}

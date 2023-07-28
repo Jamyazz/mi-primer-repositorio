@@ -228,7 +228,7 @@ header {
         
           #headerList {
             display: none;
-            width: 28rem;/////////////////////////////////////
+            width: 28rem;
             flex-direction: column;
             row-gap: 2rem;
             padding: 2rem;
@@ -310,23 +310,10 @@ header {
   }
 
 }
-
-<<<<<<< HEAD
-.boton-activado {
-    color: gray;
-    align-items: center;
-}
-
-.dropdown-item{
-    font-size: 2rem;
-    background-color: black;
-
-=======
 @media screen and (min-width: 800px) and (max-width: 1400px) {
   header {      
     nav {
       padding: 0 2.6rem 0 2.6rem;
     }
   }
->>>>>>> 9d2cb5cdefae48e5939ad383b28fd3311a2d919d
 }
