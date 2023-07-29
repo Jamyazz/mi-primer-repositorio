@@ -34,7 +34,7 @@ export class LoginBoxComponent {
     } else {
       // Falló todo nomás.
       this.loginFalladito = true;
-      this.error = 'Datos erroneos. Reinténtalo o contacta con soporte.';
+      this.error = 'Incorrect data. Please try again or contact support.';
       console.log('Falló todo nomás.');
     }
 

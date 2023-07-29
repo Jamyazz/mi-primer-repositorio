@@ -6,15 +6,15 @@
 
             <div id="login">
 
-                <h1>Inicia Sesión</h1>
+                <h1>Login</h1>
 
                 <p *ngIf="loginFalladito" id="loggeado" #loggeado>{{error}}</p>
 
-                <input type="email" name="mail" #elcorreo id="mail" placeholder="Email o número de teléfono" [(ngModel)]="mail" required>
+                <input type="email" name="mail" #elcorreo id="mail" placeholder="Email or phone number" [(ngModel)]="mail" required>
 
-                <input type="password" name="contrasenia" #lapassword id="contrasenia" placeholder="Contraseña" [(ngModel)]="contrasenia" required>
+                <input type="password" name="contrasenia" #lapassword id="contrasenia" placeholder="Password" [(ngModel)]="contrasenia" required>
 
-                <button type="submit">Iniciar sesión</button>
+                <button type="submit">Sign In</button>
 
                 <div id="recordarAyuda">
 
@@ -22,11 +22,11 @@
 
                         <input type="checkbox" name="" id="recordar">
 
-                        <label for="recordar">Recuérdame</label>
+                        <label for="recordar">Remember me</label>
 
                     </div>
 
-                    <a href="">¿Necesitas ayuda?</a>
+                    <a href="">Need help?</a>
 
                 </div>
 
@@ -36,13 +36,13 @@
 
                 <div id="registrar">
 
-                    <p>¿Primera vez en Syloflix? <a href="" id="suscribir">Suscríbete ahora</a></p>
+                    <p>New to Syloflix? <a href="" id="suscribir">Subscribe now</a></p>
 
                 </div>
 
                 <div id="captchas">
 
-                    <p id="captchaGoogle">Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot.</p>
+                    <p id="captchaGoogle">This page is protected by Google reCAPTCHA to verify that you are not a robot.</p>
 
                 </div>
 

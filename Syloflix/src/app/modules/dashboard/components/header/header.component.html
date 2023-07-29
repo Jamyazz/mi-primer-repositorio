@@ -2,11 +2,7 @@
   <nav>
     <div id="headerLinks">
       <div id="headerLogo">
-        <img routerLink="/home"
-          id="headerImage"
-          src="../../../assets/header/LOGOTIPO.png"
-          alt=""
-        />
+        <img routerLink="/home" id="headerImage" src="../../../assets/header/LOGOTIPO.png" alt="" />
       </div>
 
       <div id="headerInternalLinks">
@@ -36,33 +32,38 @@
         <!-- search bar -->
         <i class="fa-solid fa-magnifying-glass" id="magnifying-glass"></i>
         <form [formGroup]="searchForm" (ngSubmit)="searchMovieShow()">
-          <input name="input" id="searchInput" type="text" placeholder="Títulos" formControlName="searchInput">
+          <input name="input" id="searchInput" type="text" placeholder="Titles" formControlName="searchInput">
         </form>
       </div>
 
       <div id="headerPerfilDesplegable">
-        <img
-          id="headerImagenProfile"
-          src="../../../../../assets/header/profileIcon.png"
-          alt=""
-        />
+        <img id="headerImagenProfile" src="../../../../../assets/header/profileIcon.png" alt="" />
 
         <div id="headerProfileArrow">
           ⠀<i class="fa-solid fa-caret-down" id="ArrowProfile"></i>
         </div>
-          <dialog id="dialogProfile">
-            <ul id="desProfileList">
-              <li class="profileListElement" routerLink="/not-found"><i class="fa-solid fa-pencil" routerLink="/not-found" style="font-size: larger; padding-right: 1rem;"></i>Administrar Perfil</li>
-              <li class="profileListElement" routerLink="/not-found"><i class="fa-regular fa-user" routerLink="/not-found" style="font-size: larger; padding-right: 1rem;"></i>Cuenta</li>
-              <li class="profileListElement" routerLink="/not-found"><i class="fa-regular fa-circle-question" routerLink="/not-found" style="font-size: larger; padding-right: 1rem;"></i>Centro de ayuda</li>
-              <li class="profileListElement" routerLink="/not-found"><a class="headerprofileAnchor" id="anchorTop" (click)="salir()">Cerrar sesión en Syloflix
-                </a>
-              </li>
-            </ul>
-          </dialog>
-
+        <dialog id="dialogProfile">
+          <ul id="desProfileList">
+            <li class="profileListElement" routerLink="/not-found">
+              <i class="fa-solid fa-pencil" routerLink="/not-found" style="font-size: larger; padding-right: 1rem;"></i>
+              Manage Profile
+            </li>
+            <li class="profileListElement" routerLink="/not-found">
+              <i class="fa-regular fa-user" routerLink="/not-found" style="font-size: larger; padding-right: 1rem;"></i>
+              Account
+            </li>
+            <li class="profileListElement" routerLink="/not-found">
+              <i class="fa-regular fa-circle-question" routerLink="/not-found"
+                style="font-size: larger; padding-right: 1rem;"></i>
+              Help Center
+            </li>
+            <li class="profileListElement" routerLink="/not-found">
+              <a class="headerprofileAnchor" id="anchorTop" (click)="salir()">Sign Out of Syloflix</a>
+            </li>
+          </ul>
+        </dialog>
       </div>
     </div>
   </nav>
-  
+
 </header>
