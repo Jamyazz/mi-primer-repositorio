@@ -8,7 +8,7 @@ footer{
     width: 100%;
     padding: 40px 0px;
     margin-top: 40px;
-    background-color: rgb(33, 37, 41);
+    background-color: rgb(20, 20, 20);
     box-shadow: 1px 1px 10px rgb(24, 12, 12);
 }
 
@@ -30,7 +30,7 @@ footer{
     text-decoration: none;
 }
 
-.redes-footer .icon-redes-footer{
+.icon-redes-footer{
     font-size: 20px;
     margin: 20px;
     background-color: rgb(51, 49, 49);
@@ -43,30 +43,51 @@ footer{
     color: white;
 }
 
-.bi-facebook:hover{
-    background-color: rgb(40, 40, 224);
-    color: white;
+.bi-facebook{
+    &:hover{
+        background-color: rgb(40, 40, 224);
+        color: white;
+    }
 }
 
-.bi-instagram:hover{
-    background: linear-gradient( #FCDE30, #E9712A, #D2313B, #AE4198,#7540A1,#5443A8);
-    color: white;
+.bi-instagram{
+    &:hover{
+        background: linear-gradient( #FCDE30, #E9712A, #D2313B, #AE4198,#7540A1,#5443A8);
+        color: white;
+    }
 }
 
-.bi-youtube:hover{
-    background-color:red ;
-    color: white;
+.bi-youtube{
+    &:hover{
+        background-color:red ;
+        color: white;
+    }
 }
 
-.bi-whatsapp:hover{
-    background-color: green;
-    color: white;
+.bi-whatsapp{
+    &:hover{
+        background-color: green;
+        color: white;
+    }
 }
 
 
-footer h4{
+h4{
     text-align: center;
     margin-top: 30px;
     color: white;
-    font-weight: 500px;
+    font-weight:500px;
+}
+/* responsive FOOTER*/
+@media screen and (max-width: 28em){
+    footer{
+        width: 100%;
+    }
+
+    footer div{
+        width: 100%;
+    }
+    h4 {
+        font-size: 14px;
+    }
 }

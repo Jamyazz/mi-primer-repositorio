@@ -4,32 +4,11 @@
   <app-carrousel-grande ></app-carrousel-grande>
 </div>
 
-<div id="carrousel-chico-container">
-  <app-carrousel-chico></app-carrousel-chico>
-</div>
-
-<div id="carruschicos">
-  
+<div id="carruschicos" *ngFor="let item of listit;">
+  <p class="miTitle"> {{ item }} </p>
   <div class="carrousel-chico-container">
     <app-carrousel-chico></app-carrousel-chico>
   </div>
-
-  <div class="carrousel-chico-container">
-    <app-carrousel-chico></app-carrousel-chico>
-  </div>
-
-  <div class="carrousel-chico-container">
-    <app-carrousel-chico></app-carrousel-chico>
-  </div>
-
-  <div class="carrousel-chico-container">
-    <app-carrousel-chico></app-carrousel-chico>
-  </div>
-
-  <div class="carrousel-chico-container">
-    <app-carrousel-chico></app-carrousel-chico>
-  </div>
-
 </div>
 
 <div id="footer">

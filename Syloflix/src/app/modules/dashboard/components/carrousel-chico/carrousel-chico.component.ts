@@ -1,5 +1,5 @@
 // TS ACTUAL
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Input } from '@angular/core';
 import { DashboardService } from '../../services/dashboard.service';
 import { Location } from '@angular/common';
 
@@ -27,7 +27,7 @@ export class CarrouselChicoComponent {
     this.getSeriesAndMovies("movie", "2");
     this.getSeriesAndMovies("movie", "3");
   }
-
+  
   passMovie(movie: any): void {
 
     this.peli = movie;
@@ -37,7 +37,6 @@ export class CarrouselChicoComponent {
     document.body.classList.add('no-scroll');
         
   }
-
 
   getSeriesAndMovies(seccion: string, index: string) {
     this._dashboardservice.getSeriesAndMovies(seccion, index).subscribe(

@@ -6,5 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {  
-
+  
+  listit: any[] = ["News", "Branded", "Our Specials", "Enjoyment", "Internationals", "Reminders"];
+  
 }
