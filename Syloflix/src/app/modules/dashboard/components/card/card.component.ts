@@ -35,18 +35,18 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit() {
-    if (this.location.path() == "/movies") {
+    if (this.location.path() == "/browse/aat/movies") {
       this.collectionType = "Movies"
       this.getSeriesAndMovies("movie", this.index);
-    } else if (this.location.path() == "/series") {
+    } else if (this.location.path() == "/browse/aat/series") {
       this.collectionType = "TV Show"
       this.getSeriesAndMovies("tv", this.index);
-    } else if (this.location.path() == "/popular") {
+    } else if (this.location.path() == "/browse/aat/popular") {
       this.collectionType = "Recently added"
       this.getSeriesAndMovies("movie", "popular");
-    } else if (this.location.path() == "/mylist") {
+    } else if (this.location.path() == "/browse/aat/mylist") {
       this.collectionType = "My list"
-      this.getFavorites();        
+      this.getFavorites();
     } else {
       this.collectionType = "Related content to... " + this.searcheado + "."
       this.getSearch();        
@@ -54,12 +54,12 @@ export class CardComponent implements OnInit {
   }
 
   onScroll() {
-    if (this.location.path() == "/movies") {
+    if (this.location.path() == "/browse/aat/movies") {
       if (this.index < 5) {
         this.index += 1;
         this.getSeriesAndMovies("movie", this.index);
       }
-    } else if (this.location.path() == "/series") {
+    } else if (this.location.path() == "/browse/aat/series") {
       if (this.index < 5) {
         this.index += 1;
         this.getSeriesAndMovies("tv", this.index);
@@ -164,7 +164,7 @@ export class CardComponent implements OnInit {
       miListaRecuperada.push(movie);
     } else {
       miListaRecuperada.splice(movieIndex, 1);
-      if (this.locationRoute === '/mylist') {
+      if (this.locationRoute === '/browse/aat/mylist') {
         location.reload();
       }
     } 

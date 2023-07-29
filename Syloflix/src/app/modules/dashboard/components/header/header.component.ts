@@ -37,7 +37,7 @@ export class HeaderComponent {
   searchMovieShow(): void {
     const searchInputValue = this.searchForm.get('searchInput')?.value;
     const finalInput = searchInputValue?.replace(/\s/g, '_');
-    this._router.navigate(['/search'], { queryParams: { name: finalInput } }).then(() => {
+    this._router.navigate(['/browse/aat/search'], { queryParams: { name: finalInput } }).then(() => {
       window.location.reload();
     });
   }

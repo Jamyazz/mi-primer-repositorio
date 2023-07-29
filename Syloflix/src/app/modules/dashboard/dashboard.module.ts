@@ -12,21 +12,13 @@ import { HeaderComponent } from './components/header/header.component';
 import { DashboardService } from './services/dashboard.service';
 import { HttpClientModule } from '@angular/common/http';
 
-import { SeriesComponent } from './views/series/series.component';
-
-import { MoviesComponent } from './views/movies/movies.component';
-
-import { PopularNewsComponent } from './views/popular-news/popular-news.component';
-
-import { SearchComponent } from './views/search/search.component';
-
-
 import { ReactiveFormsModule } from '@angular/forms';
 import { CardComponent } from './components/card/card.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-import { MylistComponent } from './views/mylist/mylist.component';
+
 import { WatchComponent } from './views/watch/watch.component';
 import { ModalinfoComponent } from './components/modalinfo/modalinfo.component';
+import { BrowseComponent } from './views/browse/browse.component';
 
 @NgModule({
   declarations: [
@@ -37,18 +29,11 @@ import { ModalinfoComponent } from './components/modalinfo/modalinfo.component';
     FooterComponent,
     HeaderComponent,
 
-    SeriesComponent,
-
-    MoviesComponent,
-
-    PopularNewsComponent,
-
-    SearchComponent,
-
     CardComponent,
-      MylistComponent,
-      WatchComponent,
-      ModalinfoComponent
+
+    WatchComponent,
+    ModalinfoComponent,
+    BrowseComponent
   ],
   imports: [
     CommonModule,
