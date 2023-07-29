@@ -1,5 +1,5 @@
 // TS ACTUAL
-import { Component, OnInit, HostListener, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { DashboardService } from '../../services/dashboard.service';
 import { Location } from '@angular/common';
 
@@ -43,7 +43,7 @@ export class CarrouselChicoComponent {
       (response) => {
         const movies1: { image: string; rezise: string; title: any; date: any; popularity: any; review: string; }[] = [];
   
-        // Recorremos las primeras 19 películas disponibles y las agregamos hasta alcanzar 42 imágenes
+        // Agrega hasta 42 elementos.
         for (let i = 0; i < 19; i++) {
           if ((response.results[i].backdrop_path != null) && (this.cardsData.length < this.totalImagesToShow)) {
             const imagePath = `https://image.tmdb.org/t/p/original${response.results[i].backdrop_path}`;
@@ -74,6 +74,7 @@ export class CarrouselChicoComponent {
         } else {
           this.cardsData = this.cardsData.concat(movies1);
         }
+        this.shuffleadoraArray();
       },
       (error) => {
         console.error("Error loading movies:", error);
@@ -124,14 +125,13 @@ export class CarrouselChicoComponent {
     this.percent = Math.floor(Math.random() * 101);
   }
   
-  
-  shuffleArray(arr: any[]): any[] {
-    const shuffledArray = arr.slice();
+  shuffleadoraArray(): void {
+    const shuffledArray = this.cardsData;
     for (let i = shuffledArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
     }
-    return shuffledArray;
+    this.cardsData = shuffledArray;
   }
 
   goForward(): void {
@@ -148,7 +148,6 @@ export class CarrouselChicoComponent {
     const maxIndex = this.cardsData.length - this.itemsToShow;
     this.currentIndex -= this.itemsToShow;
   
-    // Asegurarse de que siempre se muestren exactamente 42 elementos
     if (this.currentIndex < 0) {
       this.currentIndex = maxIndex;
     }
