@@ -1,0 +1,137 @@
+/* Estilos generales para todos los tamaños de pantalla */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2rem;
+  align-items: center;
+}
+
+.member {
+  width: 300px;
+  text-align: center;
+  margin: 1rem;
+
+  img {
+    width: 70%;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+  }
+
+  .texto {
+    color: white;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: left;
+    text-align: justify;
+  }
+}
+
+.membersDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+  color: #00B9BB;
+}
+
+h2 {
+  margin-top: 1rem;
+  color: #00B9BB;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+
+  .contactFoot {
+    font-size: 20px;
+  }
+}
+
+button {
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.linkedin-button {
+  background-color: #0e76a8;
+  transition: transform 0.2s;
+  i {
+    font-size: 24px;
+  }
+}
+
+.github-button {
+  background-color: white;
+  transition: transform 0.2s;
+  i {
+    font-size: 24px;
+    color: black;
+  }
+}
+
+button.linkedin-button:hover,
+button.github-button:hover {
+  transform: scale(1.1);
+}
+
+/* Media query para pantallas con un ancho máximo de 500px */
+@media screen and (max-width: 500px) {
+  main {
+    padding: 1rem; /* Ajusta el espacio entre los elementos */
+  
+  }
+
+  .member {
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+  }
+}
+
+/* Media query para pantallas con un ancho mínimo de 500px y un ancho máximo de 800px */
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  main {
+    justify-content: center; /* Centra los elementos en el contenedor */
+    padding: 1rem; /* Ajusta el espacio entre los elementos */
+  }
+
+  .member {
+    width: 45%; /* Ajusta el ancho de cada miembro */
+   
+  }
+}
+
+/* Media query para pantallas con un ancho mínimo de 800px y un ancho máximo de 1100px */
+@media screen and (min-width: 800px) and (max-width: 1100px) {
+  main {
+    justify-content: space-between; /* Distribuye los elementos uniformemente */
+    padding: 2rem; /* Restaura el espacio entre los elementos */
+  }
+
+  .member {
+    width: 30%; /* Ajusta el ancho de cada miembro */
+    }
+}
+
+/* Media query para pantallas con un ancho mínimo de 1100px y un ancho máximo de 1400px */
+@media screen and (min-width: 1100px) and (max-width: 1400px) {
+  main {
+    padding: 2rem; /* Restaura el espacio entre los elementos */
+    width: 100%;
+  }
+
+  .member {
+    width: 22%; /* Ajusta el ancho de cada miembro */
+    
+  }
+}
