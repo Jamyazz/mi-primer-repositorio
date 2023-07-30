@@ -8,6 +8,7 @@ import { Location } from '@angular/common';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
+
 export class CardComponent implements OnInit {
   cardsData: any[] = [];
   originalCardsData: any[] = [];
@@ -15,7 +16,6 @@ export class CardComponent implements OnInit {
   collectionType: string = "";
   index: any = 1;
   locationRoute: any;
-  percent: number = 0;
   searchReload: string = "";
   searcheado: string = "";
   peli: any;
@@ -70,7 +70,7 @@ export class CardComponent implements OnInit {
   getSeriesAndMovies(seccion: string, index: string) {
     this._dashboardservice.getSeriesAndMovies(seccion, index).subscribe(
       (response) => {
-        const movies1: { image: string; rezise: string; title: any; date: any; popularity: any; review: string; }[] = [];
+        const movies1: { image: string; rezise: string; title: any; date: any; popularity: any; review: string; foryou:number; }[] = [];
     
         for (let i = 0; i < 19; i++) {
           if (response.results[i].backdrop_path != null) {
@@ -92,6 +92,7 @@ export class CardComponent implements OnInit {
                   date: date,
                   popularity: popularity,
                   review: review,
+                  foryou: Math.floor(Math.random() * 101),   
                 });
 
               }
@@ -113,7 +114,8 @@ export class CardComponent implements OnInit {
                   title: title,
                   date: date,
                   popularity: popularity,
-                  review: review,                  
+                  review: review,
+                  foryou: Math.floor(Math.random() * 101),               
                 });
                 
               }
@@ -191,10 +193,6 @@ export class CardComponent implements OnInit {
     
     return miListaRecuperada.some((favMovie) => favMovie.title === movieTitle);
 
-  }
-
-  randomForYou() {
-    this.percent = Math.floor(Math.random() * 101);
   }
 
   async getSearch() {

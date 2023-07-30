@@ -13,7 +13,6 @@ export class CarrouselChicoComponent {
   currentIndex: number = 0;
   itemsToShow: number = 6;
   totalImagesToShow: number = 42;
-  percent: number = 0;
   locationRoute: any;
   peli: any;
   isScrollDisabled: boolean = false;
@@ -41,7 +40,7 @@ export class CarrouselChicoComponent {
   getSeriesAndMovies(seccion: string, index: string) {
     this._dashboardservice.getSeriesAndMovies(seccion, index).subscribe(
       (response) => {
-        const movies1: { image: string; rezise: string; title: any; date: any; popularity: any; review: string; }[] = [];
+        const movies1: { image: string; rezise: string; title: any; date: any; popularity: any; review: string; foryou: number; }[] = [];
   
         // Agrega hasta 42 elementos.
         for (let i = 0; i < 19; i++) {
@@ -62,6 +61,7 @@ export class CarrouselChicoComponent {
                 date: date,
                 popularity: popularity,
                 review: review,
+                foryou: Math.floor(Math.random() * 101),
               });
             }
           }
@@ -119,10 +119,6 @@ export class CarrouselChicoComponent {
     
     return miListaRecuperada.some((favMovie) => favMovie.title === movieTitle);
 
-  }
-
-  randomForYou() {
-    this.percent = Math.floor(Math.random() * 101);
   }
   
   shuffleadoraArray(): void {

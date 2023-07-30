@@ -56,7 +56,7 @@ export class CarrouselGrandeComponent implements OnInit, AfterViewInit, OnDestro
     this.isLoading = true;
     this._dashboardservice.getSeriesAndMovies(seccion, index).subscribe(
       (response) => {
-        const movies1: { image: string; rezise: string; title: any; date: any; popularity: any; review: string; }[] = [];
+        const movies1: { image: string; rezise: string; title: any; date: any; popularity: any; review: string; foryou: number; }[] = [];
     
         for (let i = 0; i < 19; i++) {
           if (response.results[i].backdrop_path != null) {
@@ -77,6 +77,7 @@ export class CarrouselGrandeComponent implements OnInit, AfterViewInit, OnDestro
                 date: date,
                 popularity: popularity,
                 review: review,
+                foryou: Math.floor(Math.random() * 101),
               });
             }
   
@@ -108,7 +109,6 @@ export class CarrouselGrandeComponent implements OnInit, AfterViewInit, OnDestro
   onWindowScroll(event: Event): void {
     if (this.isScrollDisabled) {
       event.preventDefault();
-      // this.peli = null;
     }
   }
 

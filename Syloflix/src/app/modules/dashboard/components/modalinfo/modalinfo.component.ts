@@ -65,7 +65,7 @@ export class ModalinfoComponent {
     const finalInput = searchInputValue?.replace(/\s/g, '_');
     const words = finalInput?.split('_').slice(0, 1);
     const finalString = words?.join('_');
-    this._router.navigate(['/search'], { queryParams: { name: finalString } }).then(() => {
+    this._router.navigate(['/browse/aat/search'], { queryParams: { name: finalString } }).then(() => {
       window.location.reload();
     });
   }
