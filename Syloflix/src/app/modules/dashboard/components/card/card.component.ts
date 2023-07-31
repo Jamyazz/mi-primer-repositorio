@@ -199,7 +199,7 @@ export class CardComponent implements OnInit {
   async getSearch() {
 
     const popularNews$ = this._dashboardservice.searchMovieShow(this.searchReload);
-    const movies1: { image: string; rezise: string; title: any; date: any; popularity: any; review: string; }[] = [];
+    const movies1: { image: string; rezise: string; title: any; date: any; popularity: any; review: string; foryou:number; }[] = [];
   
     const response = await popularNews$.toPromise();
     for (let i = 0; i < response.results.length; i++) {
@@ -220,6 +220,7 @@ export class CardComponent implements OnInit {
             date: date,
             popularity: popularity,
             review: review,
+            foryou: Math.floor(Math.random() * 101), 
           });
         }
       }
