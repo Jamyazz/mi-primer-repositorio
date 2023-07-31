@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { DashboardService } from '../../services/dashboard.service';
 import { FormControl } from '@angular/forms';
 import { Location } from '@angular/common';
+import { SpinnerService } from '../../services/spinner.service';
 
 @Component({
   selector: 'app-card',
@@ -21,7 +22,7 @@ export class CardComponent implements OnInit {
   peli: any;
   isScrollDisabled: boolean = false;
 
-  constructor(private _dashboardservice: DashboardService, private location: Location) {
+  constructor(private _dashboardservice: DashboardService, private location: Location, private spinnerService: SpinnerService) {
     this.locationRoute = this.location.path();
 
     const url = decodeURIComponent(this.location.path());
