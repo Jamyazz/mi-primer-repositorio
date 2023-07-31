@@ -42,7 +42,7 @@ export class ModalinfoComponent {
       miListaRecuperada.push(movie);
     } else {
       miListaRecuperada.splice(movieIndex, 1);
-      if (this.locationRoute === '/mylist') {
+      if (this.locationRoute === '/browse/aat/mylist') {
         location.reload();
       }
     } 
