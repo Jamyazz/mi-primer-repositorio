@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 import { HomeComponent } from './views/home/home.component'; 
@@ -19,6 +18,8 @@ import { BrowseComponent } from './views/browse/browse.component';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgxSpinnerModule } from "ngx-spinner";
 import { InterceptorService } from './services/interceptor.service';
+import { AboutContactComponent } from './views/about-contact/about-contact.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +29,12 @@ import { InterceptorService } from './services/interceptor.service';
     CarrouselChicoComponent,
     FooterComponent,
     HeaderComponent,
-
     CardComponent,
-
     WatchComponent,
     ModalinfoComponent,
-    BrowseComponent
+    BrowseComponent,
+    AboutContactComponent,
+    AboutUsComponent
   ],
   imports: [
     CommonModule,

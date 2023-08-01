@@ -1,10 +1,14 @@
 <main>
-  <div class="membersDiv">
-    <h1>About Us</h1>
+  <div routerLink="/" id="volver">
+    <i class="fa-solid fa-arrow-turn-up"></i>
+    <p>Return to Syloflix.</p>
+  </div>
+  <h1>ABOUT US</h1>
+  <div class="membersDiv" *ngFor="let photo of photos; let i = index;">
     <section class="member">
-      <img src="../../../../../assets/about-us/German.jpg" alt="Integrante 1">
-      <h2>German M. Anselmo</h2>
-      <p class="texto">Ex-Logistician nowadays Freelance Python, Java Software & Frontend Vue.js Dev. with hundred of hours of practice with it's languages and a good amount of libraries and frameworks, looking for a great chance.</p>
+      <img [src]="photo" alt="{{ photo }}">
+      <h2>{{ names[i] }}</h2>
+      <p class="texto">{{ description[i] }}</p>
       <div class="social-links">
         <a href="https://www.linkedin.com/in/german-anselmo/" target="_blank">
           <button class="linkedin-button">
@@ -12,48 +16,6 @@
           </button>
         </a>
         <a href="https://github.com/gmanselmo" target="_blank">
-          <button class="github-button">
-            <i class="fa-brands fa-github-alt"></i>
-          </button>
-        </a>
-      </div>
-    </section>
-
-    <section class="member">
-      <img src="../../../../../assets/about-us/Noelia.jpg" alt="Integrante 2">
-      <h2>Noelia Chavez</h2>
-      <p class="texto">I am detail-oriented, analytical, persevering, proactive, and empathetic. I possess the ability to adapt and learn quickly. I enjoy working in a team, learning from different perspectives, and fostering a positive environment.
-
-        Currently, I work as an Administrative Assistant in the administration and finance sector at Gemini Pharmaceuticals.
-        
-        I am a Computer Technician graduate from Republica del Paraguay Technical Institute in Buenos Aires, and I am pursuing a degree in Computer Engineering at the National University of La Matanza.
-        
-        I am constantly engaged in a process of training and learning, seeking to further develop my skills.</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/noelia-jazmin-chavez-/" target="_blank">
-          <button class="linkedin-button">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </button>
-        </a>
-        <a href="https://github.com/Jamyazz" target="_blank">
-          <button class="github-button">
-            <i class="fa-brands fa-github-alt"></i>
-          </button>
-        </a>
-      </div>
-    </section>
-
-    <section class="member">
-      <img src="../../../../../assets/about-us/Agustin.jpg" alt="Integrante 3">
-      <h2>Agustin Staiger</h2>
-      <p class="texto">I'm a web developer specializing in HTML, CSS, and JS. Coder House gave me a strong foundation in web development. I've also attended Bootcamps with Radium Rocket and Revolución Digital, acquiring advanced skills and staying up-to-date with the latest tech trends.</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/agust%C3%ADn-staiger-186272235/" target="_blank">
-          <button class="linkedin-button">
-            <i class="fa-brands fa-linkedin-in"></i>
-          </button>
-        </a>
-        <a href="https://github.com/agustinstaiger9" target="_blank">
           <button class="github-button">
             <i class="fa-brands fa-github-alt"></i>
           </button>

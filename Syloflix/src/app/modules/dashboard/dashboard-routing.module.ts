@@ -4,6 +4,7 @@ import { AuthGuard } from 'src/app/shared/guards';
 import { HomeComponent } from './views/home/home.component';
 import { WatchComponent } from './views/watch/watch.component';
 import { BrowseComponent } from './views/browse/browse.component';
+import { AboutContactComponent } from './views/about-contact/about-contact.component';
 
 const routes: Routes = [
   {
@@ -45,6 +46,16 @@ const routes: Routes = [
     path: "browse/aat/search", 
     canActivate: [AuthGuard.AuthGuardActivate],
     component:BrowseComponent,
+  },
+  { 
+    path: "about", 
+    canActivate: [AuthGuard.AuthGuardActivate],
+    component:AboutContactComponent,
+  },
+  { 
+    path: "contact", 
+    canActivate: [AuthGuard.AuthGuardActivate],
+    component:AboutContactComponent,
   },
 ];
 
