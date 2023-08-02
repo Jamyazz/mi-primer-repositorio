@@ -20,6 +20,7 @@ import { NgxSpinnerModule } from "ngx-spinner";
 import { InterceptorService } from './services/interceptor.service';
 import { AboutContactComponent } from './views/about-contact/about-contact.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     ModalinfoComponent,
     BrowseComponent,
     AboutContactComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    ContactFormComponent
   ],
   imports: [
     CommonModule,
