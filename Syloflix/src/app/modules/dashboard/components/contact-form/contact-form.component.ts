@@ -30,6 +30,9 @@ export class ContactFormComponent {
       .subscribe(
         response => {
           this.send = true;
+          setTimeout(function() {
+            window.location.href = "/";
+          }, 5000);
         },
         error => {
           console.error('Error al enviar el formulario:', error);
