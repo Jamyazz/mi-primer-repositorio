@@ -1,27 +1,35 @@
-<main id="mainForm">
+<main *ngIf="!send" id="mainForm">
 
     <h1 id="titleForm">Contact Form</h1>
 
-    <form id="formulary" action="">
-        
-        <label class="labelForm" for="name">Name</label>
+    <form id="formulary">
 
-        <input class="inputForm" type="text" id="name" placeholder="Name">
+        <div id="iq">
+            <label class="labelForm" for="message">Tell us your problem</label>
+            <textarea placeholder="Your message.." name="message" id="message" cols="30" rows="10"></textarea>
+        </div>
 
-        <label class="labelForm" for="lastname">Lastname</label>
+        <div id="dr">
+            <label class="labelForm" for="name">Name</label>
+            <input class="inputForm" type="text" id="name" name="name" placeholder="Name">
 
-        <input class="inputForm" type="text" id="lastname" placeholder="Lastname">
+            <label class="labelForm" for="email">Email</label>
+            <input class="inputForm" type="email" name="email" id="email" placeholder="mail@mail.com">
+            
+            <label class="labelForm" for="phone">Phone Number</label>
+            <input class="inputForm" type="tel" name="phone" id="phone" placeholder="5491173642014">
 
-        <label class="labelForm" for="email">Email</label>
-
-        <input class="inputForm" type="email" name="" id="email" placeholder="mail@mail.com">
-        
-        <label class="labelForm" for="phone">Phone Number</label>
-
-        <input class="inputForm" type="tel" name="" id="phone" placeholder="5491173642014">
-
-        <input id="inputButton" type="submit" value="SEND FORM">
-
+            <input id="inputButton" (click)="askHelp()" value="SEND">    
+        </div>
     </form>
+</main>
+
+<main *ngIf="send" id="mainForm">
+    <h1 id="titleForm">Contact Form</h1>
+
+    <div id="formulary" style="margin: 16rem 0;">
+
+        <p style="font-size: 2rem; color: white; padding: 2rem 3rem 0 2rem;">Message sent! Wait for our Reply</p>
+    </div>
 
 </main>

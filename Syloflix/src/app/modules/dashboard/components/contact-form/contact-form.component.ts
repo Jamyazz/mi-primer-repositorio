@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class ContactFormComponent {
 
+  send: boolean = false;
+
+  askHelp(): void {
+    this.send = true;
+  }
+  
+
 }
