@@ -229,7 +229,9 @@ export class CardComponent implements OnInit {
     this.cardsData = this.cardsData.concat(movies1);
     this.originalCardsData = this.originalCardsData.concat(movies1);
   
-
+    if (this.cardsData.length == 0) {
+      location.reload();
+    }
   }
   
 
