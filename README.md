@@ -25,6 +25,9 @@ Para levantar el proyecto.
 3. Posicionandonos dentro de la carpeta Syloflix del fichero descomprimido.
 4. Desde una terminal ejecutamos: npm install
 5. Correr el proyecto con: ng serve -o
+
+USUARIO: dev.team@syloflix.com
+CONTRASEÑA: syloflix
 -----
 
 *****
