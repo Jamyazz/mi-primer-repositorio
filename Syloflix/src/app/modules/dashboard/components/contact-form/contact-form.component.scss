@@ -74,9 +74,12 @@
                 border-radius: 3rem;
                 background-color: #029a9c;
                 align-self: flex-end;
+                color: white;
+                text-align: center;
 
                 &:hover {
                     background-color: #006e70;
+                    cursor: pointer;
                 }
             }
         }
